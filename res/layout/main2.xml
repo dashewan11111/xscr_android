@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_tab_layout"
+    style="@style/layout.XY"
+    android:background="@color/gray_bg1"
+    android:orientation="horizontal" >
+
+    <FrameLayout
+        android:id="@+id/main_tab_home"
+        style="@style/main_tab_item" >
+
+        <LinearLayout
+            style="@style/layout.xy"
+            android:layout_gravity="center"
+            android:duplicateParentState="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                style="@style/main_tab_item_image"
+                android:layout_below="@+id/tab_1_text"
+                android:background="@drawable/bottom_home_selector" />
+
+            <TextView
+                android:id="@+id/tab_1_text"
+                style="@style/main_tab_item_text"
+                android:text="@string/bottom_home_title" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_tab_category"
+        style="@style/main_tab_item" >
+
+        <LinearLayout
+            style="@style/layout.xy"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                style="@style/main_tab_item_image"
+                android:layout_below="@+id/tab_2_text"
+                android:background="@drawable/bottom_category_selector" />
+
+            <TextView
+                android:id="@+id/tab_2_text"
+                style="@style/main_tab_item_text"
+                android:text="@string/bottom_category_title" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_tab_country"
+        style="@style/main_tab_item" >
+
+        <LinearLayout
+            style="@style/layout.xy"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                style="@style/main_tab_item_image"
+                android:layout_below="@+id/tab_3_text"
+                android:background="@drawable/bottom_my_selector" />
+
+            <TextView
+                android:id="@+id/tab_3_text"
+                style="@style/main_tab_item_text"
+                android:text="@string/string_community" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_tab_cart"
+        style="@style/main_tab_item" >
+
+        <LinearLayout
+            style="@style/layout.xy"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                style="@style/main_tab_item_image"
+                android:layout_below="@+id/tab_4_text"
+                android:background="@drawable/bottom_cars_selector" />
+
+            <TextView
+                android:id="@+id/tab_4_text"
+                style="@style/main_tab_item_text"
+                android:text="@string/string_cars" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_cars_count"
+            style="@style/sample_number_text"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="2dip"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_tab_my"
+        style="@style/main_tab_item" >
+
+        <LinearLayout
+            style="@style/layout.xy"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                style="@style/main_tab_item_image"
+                android:layout_below="@+id/tab_5_text"
+                android:background="@drawable/bottom_my_selector" />
+
+            <TextView
+                android:id="@+id/tab_5_text"
+                style="@style/main_tab_item_text"
+                android:text="@string/string_my_ccigmall" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

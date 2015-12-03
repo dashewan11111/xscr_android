@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/product_show_image"
+    android:layout_width="70dp"
+    android:layout_height="70dp" >
+
+    <ImageView
+        android:id="@+id/img_product_show"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/img_default_114" />
+
+    <ImageView
+        android:id="@+id/img_product_show_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@drawable/img_product_showtag" />
+
+</RelativeLayout>

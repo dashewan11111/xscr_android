@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/category_list_bg_gray"
+    android:orientation="vertical"
+    android:padding="1dip" >
+
+    <TextView
+        android:id="@+id/category_first_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:text="情趣内衣"
+        android:textColor="@color/gray_2"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.Xy"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/logistics_content_view"
+        style="@style/layout.Xy"
+        android:layout_marginLeft="80dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/logistics_status_info"
+            style="@style/order_list_item_text"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/gray_1" />
+
+        <TextView
+            android:id="@+id/logistics_time_info"
+            style="@style/order_list_item_text"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/gray_1" />
+
+        <View
+            android:id="@+id/logistics_content_view_bottom_line"
+            style="@style/layout.Xy"
+            android:layout_height="1dp"
+            android:background="@color/gray_line1" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout.Xy"
+		android:layout_alignBottom="@id/logistics_content_view"
+        android:layout_width="80dp"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/logistics_top_line"
+            android:layout_width="1dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/gray_line1"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/logistics_item_point"
+            style="@style/layout.xy"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/time_point_gray" />
+
+        <View
+            android:id="@+id/logistics_bottom_line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/gray_line1" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cart_giveaway_item"
+    style="@style/layout.Xy"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        style="@style/layout.xy"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/cart_giveaway_tag"
+        android:textColor="@color/red"
+        android:textSize="@dimen/default_size_small_2" />
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/gray_2"
+        android:textSize="@dimen/default_size_small_2" />
+
+    <TextView
+        android:id="@+id/product_count"
+        style="@style/layout.xy"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/gray_2"
+        android:textSize="@dimen/default_size_small_2" />
+
+</LinearLayout>

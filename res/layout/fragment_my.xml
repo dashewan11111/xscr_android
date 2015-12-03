@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.XY"
+    android:background="@color/gray_bottom_bg"
+    android:orientation="vertical" >
+
+    <!-- 用户信息区 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dip"
+        android:background="@drawable/my_ccigmal_bcg"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.0" >
+
+            <!-- 已登录 -->
+
+            <LinearLayout
+                android:id="@+id/fragment_my_layout_loaded"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:visibility="gone" >
+
+                <com.adult.android.view.CircleImageView
+                    android:id="@+id/fragment_my_user_avator"
+                    android:layout_width="75dip"
+                    android:layout_height="75dip"
+                    android:src="@drawable/user_default_icon" >
+                </com.adult.android.view.CircleImageView>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dip" >
+
+                    <TextView
+                        android:id="@+id/fragment_my_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="越野小小兔"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/fragment_my_user_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:text="资料完整度 20%"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="10dip"
+                    android:layout_height="19dip"
+                    android:src="@drawable/arrow" />
+            </LinearLayout>
+            <!-- 未登录 -->
+
+            <LinearLayout
+                android:id="@+id/fragment_my_layout_unLoaded"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:visibility="visible" >
+
+                <Button
+                    android:id="@+id/fragment_my_login"
+                    android:layout_width="90dip"
+                    android:layout_height="40dip"
+                    android:background="@drawable/common_round_conner_bg_purple_stroke"
+                    android:gravity="center"
+                    android:text="登陆"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/fragment_my_regist"
+                    android:layout_width="90dip"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="30dip"
+                    android:background="@drawable/common_round_conner_bg_purple"
+                    android:gravity="center"
+                    android:text="注册"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#90000000"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/fragment_my_community_level"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="社区等级"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/fragment_my_user_cummunity_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_my_topic_list"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的发言"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/fragment_my_user_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 内容区 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <LinearLayout
+            android:id="@+id/fragment_my_order"
+            style="@style/layout.Xy"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <ImageView
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:src="@drawable/my_order_all" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1.0"
+                android:text="全部订单"
+                android:textColor="@color/gray_2"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="7dip"
+                android:layout_height="14dip"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+
+        <include layout="@layout/line_light_gray_full" />
+
+        <LinearLayout
+            android:id="@+id/fragment_my_coupon"
+            style="@style/layout.Xy"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <ImageView
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:src="@drawable/my_coupon" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1.0"
+                android:text="我的券包"
+                android:textColor="@color/gray_2"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="7dip"
+                android:layout_height="14dip"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+
+        <include layout="@layout/line_light_gray_full" />
+
+        <LinearLayout
+            android:id="@+id/fragment_my_comment"
+            style="@style/layout.Xy"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <ImageView
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:src="@drawable/my_comment" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1.0"
+                android:text="我的评价"
+                android:textColor="@color/gray_2"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="7dip"
+                android:layout_height="14dip"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+
+        <include layout="@layout/line_light_gray_full" />
+
+        <LinearLayout
+            android:id="@+id/fragment_my_favourite"
+            style="@style/layout.Xy"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <ImageView
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:src="@drawable/my_favourite" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1.0"
+                android:text="我的收藏"
+                android:textColor="@color/gray_2"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="7dip"
+                android:layout_height="14dip"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+
+        <include layout="@layout/line_light_gray_full" />
+
+        <LinearLayout
+            android:id="@+id/fragment_service_center"
+            style="@style/layout.Xy"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <ImageView
+                android:layout_width="18dip"
+                android:layout_height="18dip"
+                android:src="@drawable/my_customer_service" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1.0"
+                android:text="客服中心"
+                android:textColor="@color/gray_2"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="7dip"
+                android:layout_height="14dip"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+
+        <include layout="@layout/line_light_gray_full" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_my_about"
+        style="@style/layout.Xy"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingTop="10dip" >
+
+        <ImageView
+            android:layout_width="18dip"
+            android:layout_height="18dip"
+            android:src="@drawable/about" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1.0"
+            android:text="关于成人秀"
+            android:textColor="@color/gray_2"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="7dip"
+            android:layout_height="14dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+    <include layout="@layout/line_light_gray_full" />
+
+</LinearLayout>

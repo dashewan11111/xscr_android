@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include
+        android:id="@+id/empty_list_view"
+        layout="@layout/empty_view"
+        android:visibility="gone" />
+    <FrameLayout 
+         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff" >
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/lv_goods_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#f4f4f4"
+            android:dividerHeight="2dp"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="@color/transparent"
+            android:smoothScrollbar="true"
+            ptr:ptrMode="both" />
+
+        <!-- android:cacheColorHint="@android:color/transparent" -->
+
+
+        <!-- 回到顶部按钮 -->
+
+        <ImageView
+            android:id="@+id/backToStart"
+            android:layout_width="@dimen/back_to_top_icon_size"
+            android:layout_height="@dimen/back_to_top_icon_size"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="15dip"
+            android:layout_marginRight="15dip"
+            android:src="@drawable/icon_backup_selector" />
+ 	</FrameLayout>
+</LinearLayout>

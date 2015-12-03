@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.XY"
+    android:background="@color/gray_bg1" >
+
+    <LinearLayout
+        style="@style/layout.Xy"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="@style/layout.Xy"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="8dp" >
+
+            <TextView
+                android:id="@+id/logistics_company"
+                style="@style/order_list_item_text"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/gray_3" />
+
+            <TextView
+                android:id="@+id/logistics_number"
+                style="@style/order_list_item_text"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/gray_3" />
+        </LinearLayout>
+
+        <View
+            style="@style/layout.Xy"
+            android:layout_height="1dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/gray_line1" />
+
+        <View
+            style="@style/layout.Xy"
+            android:layout_height="1dp"
+            android:background="@color/gray_line1" />
+
+        <LinearLayout
+            android:id="@+id/progress_bar"
+            style="@style/layout.Xy"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+</ScrollView>

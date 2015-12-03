@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.Xy"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip" >
+
+    <LinearLayout
+        style="@style/layout.Xy"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/pay_method_name"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="货到付款"
+            android:textColor="@color/gray_2"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/pay_method_after_check"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:paddingBottom="13dip"
+            android:paddingLeft="25dip"
+            android:paddingRight="0dip"
+            android:paddingTop="13dip"
+            android:src="@drawable/cart_product_select_on" />
+    </LinearLayout>
+
+    <include layout="@layout/line_gray_full" />
+
+    <LinearLayout
+        style="@style/layout.Xy"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="支付宝"
+            android:textColor="@color/gray_2"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/pay_method_alipay_check"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:paddingBottom="13dip"
+            android:paddingLeft="25dip"
+            android:paddingRight="0dip"
+            android:paddingTop="13dip"
+            android:src="@drawable/cart_product_select_off" />
+    </LinearLayout>
+
+    <include layout="@layout/line_gray_full" />
+
+    <LinearLayout
+        style="@style/layout.Xy"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="微信支付"
+            android:textColor="@color/gray_2"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/pay_method_wechat_check"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:paddingBottom="13dip"
+            android:paddingLeft="25dip"
+            android:paddingRight="0dip"
+            android:paddingTop="13dip"
+            android:src="@drawable/cart_product_select_off" />
+    </LinearLayout>
+
+</LinearLayout>

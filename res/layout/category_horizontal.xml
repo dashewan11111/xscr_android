@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white" >
+
+    <LinearLayout
+        android:id="@+id/country_info"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/country_horizontal_image"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:src="@drawable/img_default_114" 
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/h1_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center_horizontal"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxEms="9"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:textSize="13dp"/>
+
+        <TextView
+            android:id="@+id/h2_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxEms="5"
+            android:textSize="13dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/country_info"
+        android:background="@color/item_white" />
+
+</RelativeLayout>

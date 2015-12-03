@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_normal_height"
+    android:orientation="horizontal" >
+	<include 
+        android:layout_width="@dimen/image_big_size"
+        android:layout_height="@dimen/image_big_size"
+        android:layout_margin="10dp"
+        layout="@layout/order_list_item_image_default"/>
+
+    <TextView
+        android:id="@+id/order_single_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/order_normal_text_size" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:src="@drawable/img_arrow" />
+
+</LinearLayout>

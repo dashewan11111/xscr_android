@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bottom_bg"
+    android:orientation="vertical"
+    android:paddingTop="15dip" >
+
+    <TextView
+        android:id="@+id/marrage_status_single"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dip"
+        android:text="单身" />
+
+    <include layout="@layout/line_gray_full" />
+
+    <TextView
+        android:id="@+id/marrage_status_in_love"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dip"
+        android:text="恋爱" />
+
+    <include layout="@layout/line_gray_full" />
+
+    <TextView
+        android:id="@+id/marrage_status_married"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dip"
+        android:text="结婚" />
+
+    <include layout="@layout/line_gray_full" />
+
+    <TextView
+        android:id="@+id/marrage_status_divoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dip"
+        android:text="离异/丧偶" />
+
+    <include layout="@layout/line_gray_full" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dip"
+        android:text="选择您的婚姻状况" />
+
+</LinearLayout>

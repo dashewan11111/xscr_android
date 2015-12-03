@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.XY"
+    android:background="@color/gray_bottom_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/evaluation_container"
+        style="@style/layout.Xy"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <ImageView
+            android:id="@+id/evaluation_hide_name"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:src="@drawable/check_xhdpi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:text="匿名评论"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/evaluation_btn_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/common_round_conner_bg_purple"
+        android:padding="10dip"
+        android:text="提交评论"
+        android:textColor="@color/white" />
+
+</LinearLayout>

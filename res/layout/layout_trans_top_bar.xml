@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_trans_header"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/layout_trans_btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="10dip"
+        android:src="@drawable/btn_actionbar_back_details" />
+
+    <TextView
+        android:id="@+id/layout_trans_title"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:textColor="@android:color/transparent"
+        android:textSize="@dimen/default_size" />
+
+    <ImageView
+        android:id="@+id/layout_trans_btn_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="10dip"
+        android:src="@drawable/btn_actionbar_cart_details" />
+
+</LinearLayout>

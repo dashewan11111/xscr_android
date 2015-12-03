@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.XY"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/customer_service_online"
+        style="@style/layout.Xy"
+        android:layout_marginTop="20dip"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <ImageView
+            android:layout_width="18dip"
+            android:layout_height="18dip"
+            android:src="@drawable/my_customer_service" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1.0"
+            android:text="在线客服"
+            android:textColor="@color/gray_2"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="7dip"
+            android:layout_height="14dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+    <include layout="@layout/line_light_gray_full" />
+
+    <LinearLayout
+        android:id="@+id/customer_service_help_center"
+        style="@style/layout.Xy"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <ImageView
+            android:layout_width="18dip"
+            android:layout_height="18dip"
+            android:src="@drawable/customer_service_help" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1.0"
+            android:text="帮助中心"
+            android:textColor="@color/gray_2"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="7dip"
+            android:layout_height="14dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+    <include layout="@layout/line_light_gray_full" />
+
+    <LinearLayout
+        android:id="@+id/customer_service_phone"
+        style="@style/layout.Xy"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <ImageView
+            android:layout_width="18dip"
+            android:layout_height="18dip"
+            android:src="@drawable/customer_service_phone" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1.0"
+            android:text="客服热线"
+            android:textColor="@color/gray_2"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="7dip"
+            android:layout_height="14dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+    <include layout="@layout/line_light_gray_full" />
+
+</LinearLayout>

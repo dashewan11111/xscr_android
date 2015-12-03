@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.XY"
+    android:background="@color/gray_bottom_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/layout.Xy"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="15dip" >
+
+        <TextView
+            style="@style/text_gray_12"
+            android:layout_weight="0"
+            android:text="收 货 人:" />
+
+        <EditText
+            android:id="@+id/address_edit_receiver_name"
+            style="@style/layout.Xy"
+            android:background="@null"
+            android:paddingLeft="10dip"
+            android:text=""
+            android:textColor="@color/gray_3"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <include layout="@layout/line_gray_full" />
+
+    <LinearLayout
+        style="@style/layout.Xy"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="15dip" >
+
+        <TextView
+            style="@style/text_gray_12"
+            android:layout_weight="0"
+            android:text="手机号码:" />
+
+        <EditText
+            android:id="@+id/address_edit_receiver_mobile"
+            style="@style/layout.Xy"
+            android:background="@null"
+            android:digits="0123456789"
+            android:inputType="numberSigned"
+            android:maxLength="11"
+            android:paddingLeft="10dip"
+            android:textColor="@color/gray_3"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <include layout="@layout/line_gray_full" />
+
+    <LinearLayout
+        android:id="@+id/address_llyt_receiver_area"
+        style="@style/layout.Xy"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="15dip" >
+
+        <TextView
+            style="@style/text_gray_12"
+            android:layout_weight="0"
+            android:text="省 市 区:" />
+
+        <TextView
+            android:id="@+id/address_edit_receiver_area"
+            style="@style/layout.Xy"
+            android:background="@null"
+            android:paddingLeft="10dip"
+            android:textColor="@color/gray_3"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <include layout="@layout/line_gray_full" />
+
+    <LinearLayout
+        style="@style/layout.Xy"
+        android:background="@color/white"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:padding="15dip" >
+
+        <TextView
+            style="@style/text_gray_12"
+            android:layout_weight="0"
+            android:gravity="top"
+            android:text="详细地址:" />
+
+        <EditText
+            android:id="@+id/address_edit_receiver_detail"
+            style="@style/layout.Xy"
+            android:background="@null"
+            android:minLines="5"
+            android:gravity="top"
+            android:paddingLeft="10dip"
+            android:textColor="@color/gray_3"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

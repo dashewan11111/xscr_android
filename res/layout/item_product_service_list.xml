@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="5dip"
+    android:paddingRight="10dip" >
+
+    <ImageView
+        android:id="@+id/item_product_service_list_img"
+        android:layout_width="12dip"
+        android:layout_height="12dip"
+        android:src="@drawable/cart_product_select_on" />
+
+    <TextView
+        android:id="@+id/item_product_service_list_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dip"
+        android:text="货到付款"
+        android:textColor="@color/gray"
+        android:textSize="11sp" />
+
+</LinearLayout>

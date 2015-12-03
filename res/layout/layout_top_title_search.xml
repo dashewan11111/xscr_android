@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:background="@color/bg_title_bar" >
+
+    <Button
+        android:id="@+id/search_cancel"
+        style="@style/common_header_btn_search"
+        android:textColor="@color/black"
+        android:text="@string/cancel" />
+
+    <com.adult.android.view.ClearEditText
+        android:id="@+id/search_input"
+        android:layout_width="wrap_content"
+        android:layout_height="35dip"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="12dip"
+        android:layout_toLeftOf="@id/search_cancel"
+        android:background="@drawable/search_background"
+        android:drawableLeft="@drawable/common_search_icon"
+        android:drawablePadding="5dip"
+        android:hint="@string/search_hint"
+        android:imeOptions="actionSearch"
+        android:maxLength="50"
+        android:paddingLeft="10dip"
+        android:paddingRight="8dip"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textColorHint="@color/grey"
+        android:textSize="16sp" />
+
+</RelativeLayout>

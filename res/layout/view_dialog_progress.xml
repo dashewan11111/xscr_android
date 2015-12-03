@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00ffffff"
+    android:gravity="center"
+    android:minHeight="60dp"
+    android:minWidth="180dp"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+dialog_progress/pb"
+        android:layout_width="90dip"
+        android:layout_height="90dip"
+        android:src="@drawable/loading" />
+
+    <TextView
+        android:id="@+dialog_progress/txt"
+        android:layout_width="60dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="24sp" />
+
+</LinearLayout>

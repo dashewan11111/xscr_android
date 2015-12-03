@@ -1,0 +1,72 @@
+<resources>
+
+    <string name="head">这里是HeadView</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新...</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="loading">正在加载...</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+    <string name="none" />
+    <string name="more">更多</string>
+    <string name="remarks">备注</string>
+    <string name="press_exit_app">再按一次退出程序</string>
+    <string name="action_settings">Settings</string>
+    <string name="goods_item_price">&#165;</string>
+    <string name="goods_sort_price">全部</string>
+    <string name="goods_sort_sales">好评</string>
+    <string name="goods_sort_focus">中评</string>
+    <string name="goods_sort_putime">差评</string>
+    <string name="goods_item_bagweight">鞋码&#058;</string>
+    <string name="goods_find">查询&#8230;</string>
+
+    <!-- 商品详情页 -->
+    <string name="goods_oldprice">原价&#058;</string>
+    <string name="goods_category">品牌&#058;</string>
+    <string name="goods_bagweight">鞋码&#058;</string>
+    <string name="goods_fnumber">材质&#058;</string>
+    <string name="goods_name">名称&#058;</string>
+    <string name="goods_mode">类型&#058;</string>
+    <string name="goods_details">商品信息</string>
+    <string name="goods_count">购买数量</string>
+    <string name="goods_pag">&#040;双&#041;</string>
+    <string name="goods_focus">晒单讨论</string>
+    <string name="goods_info">购买咨询</string>
+    <string name="goods_value">人评价</string>
+
+    <!-- 详情页tab -->
+    <string name="string_product_info">商品详情</string>
+    <string name="string_product_notes">购买须知</string>
+    <string name="string_product_parameter">规格参数</string>
+
+    <!-- 购物车 -->
+    <string name="shoopping_cart">购物车</string>
+    <string name="cart_all_sum">总计&#058;</string>
+    <string name="cart_product_sum">商品金额&#058;</string>
+    <string name="cart_price">&#160;&#165;</string>
+    <string name="cart_item_sum">金额&#160;&#165;</string>
+    <string name="cart_item_count">数量&#058;</string>
+    <string name="cart_item_number">类型&#058;</string>
+    <string name="cart_del_selected">删除选择商品</string>
+    <string name="cart_count">X</string>
+    <string name="cart_edit_count">修改购买数量</string>
+    <string name="cart_edit_ok">确定</string>
+    <string name="cart_edit_cancel">取消</string>
+    <!-- 我的鑫世界 -->
+    <string name="login_first">请您登录...</string>
+    <string name="not_empty_name">用户名不能为空</string>
+    <string name="nick_name_text">昵&#160;&#160;&#160;&#160;称：</string>
+    <string name="sex_text">性&#160;&#160;&#160;&#160;别：</string>
+    <string name="birthday_text">生&#160;&#160;&#160;&#160;日：</string>
+    <string name="email_text">邮&#160;&#160;&#160;&#160;箱：</string>
+    <string name="telephone_text">手&#160;&#160;&#160;&#160;机：</string>
+    <string name="digits">0123456789qwertyuioplkjhgfdsazxcvbnmQAZXSWEDCVFRTGBNHYUJMKIOLP</string>
+
+    <!-- 网络失败 -->
+    <string name="request_error_text">您的网络不太稳定，请重试</string>
+
+</resources>

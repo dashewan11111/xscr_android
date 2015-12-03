@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bottom"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/send_message_tv"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="请输入新手机号和新手机获取的验证码"
+        android:textColor="@color/black"
+        android:textSize="13dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_line1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/telephone_text"
+            android:textSize="@dimen/default_size" />
+
+        <EditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:hint="请输入您的新手机号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="@color/gray_1"
+            android:textSize="@dimen/default_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_line1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="验证码："
+            android:textSize="@dimen/default_size" />
+
+        <EditText
+            android:id="@+id/et_vali_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textColor="@color/gray_1"
+            android:textSize="@dimen/default_size" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_marginLeft="30dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_line1" />
+
+        <Button
+            android:id="@+id/again_get_number_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/common_round_conner_bg_purple"
+            android:padding="10dp"
+            android:text="获取验证码"
+            android:textColor="@color/white"
+             />
+
+        <RelativeLayout
+            android:id="@+id/rl_sec_tv"
+            android:layout_width="110dp"
+            android:visibility="gone"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/sec_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="120"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/sec_tv"
+                android:text="秒后重新获取"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_line1" />
+
+    <Button
+        android:id="@+id/save_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/common_round_conner_bg_purple"
+        android:padding="10dp"
+        android:text="保存修改"
+        android:textColor="#ffffff" />
+
+</LinearLayout>

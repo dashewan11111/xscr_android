@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res-auto"
+    style="@style/common_header_top_title_style" >
+
+    <ImageView
+        android:id="@+id/default_top_bar_left_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:paddingLeft="20dip"
+        android:paddingTop="13dip"
+        android:paddingBottom="13dip"
+        android:paddingRight="10dip"
+        android:src="@drawable/back"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/layout_top_title"
+        style="@style/common_header_top_title_center_text_style"
+        android:text="@string/string_cars" />
+
+    <TextView
+        android:id="@+id/layout_top_right_button"
+        style="@style/common_header_btn_text"
+        android:layout_alignParentRight="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider" />
+
+</RelativeLayout>

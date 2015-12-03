@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adult.android.view.CircleImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="35dip"
+    android:layout_height="35dip"
+    android:margin="5dip"
+    android:src="@drawable/user_default_icon" >
+
+</com.adult.android.view.CircleImageView>

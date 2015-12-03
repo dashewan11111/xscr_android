@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, minimal-ui">
+<title>错误提示：连接服务失败，请重试或检查网络状态</title>
+<style>
+*{margin:0;padding:0}
+#errorMessage{position:absolute;top:50%;width:100%;text-align:center;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);transform:translateY(-50%);}
+.error-tips h2{font-size:24px;font-family:'microsoft yahei';font-weight:normal;color:#666}
+.error-pic{height:68px;padding:60px 0;text-align:center;}
+.error-des{padding-bottom:60px}
+.error-des p{font-size:24px;line-height:30px;color:#999}
+.error-btn{width:160px;height:60px;margin:0 30px;font-size:26px;line-height:60px;color:#666;background-color:#fff;text-align:center;border:1px solid #999;cursor:pointer;border-radius:30px;outline:none}
+.error-btn:hover,.error-btn:focus{color:#333;background-color:#ebebeb}
+</style>
+</head>
+
+<body>
+<div id="errorMessage">
+    <div class="error-tips"><h2 id="errorUrl">错误提示：连接服务失败，请重试或检查网络状态</h2></div>
+    <div class="error-pic"><img src="img/errorPic.png" width="92" height="68" /></div>
+    <div class="error-des">
+        <p id="errorDes_zn">错误描述：DF1 PS3 54LJSH5 6L</p>
+        <p id="errorDes">DF1 PS3 54LJSH5 6L</p>
+    </div>
+    <div class="error-bar">
+        <input type="button" value="检查网络" class="error-btn error-false" onClick="btnCheckNet()" />
+        <input type="button" value="重试" class="error-btn error-true" onClick="btnRetry()" />
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+var datalist = window.location.search.substring("1").split("&");
+var errorUrl ;
+var errorCode ;
+var errorDes ;
+var errorDes_zn ;
+$.each(datalist, function(e, r) {
+    var s = r.split("=")[0], t = r.split("=")[1];
+    switch (s) {
+      case "url":
+        errorUrl=  decodeURI(t);
+        break;
+        
+      case "code":
+        errorCode = decodeURI(t);
+        break;
+
+      case "des":
+        errorDes = decodeURI(t);
+        break;
+        
+      case "des_zn":
+        errorDes_zn = decodeURI(t);
+        break;
+    }
+});
+$("#errorDes_zn").html("错误描述：" + errorDes_zn);
+$("#errorDes").html("错误代码："+errorCode + '     ' + errorDes );
+
+function btnRetry(){
+	window.ccig.btnRetry(errorUrl);
+}
+
+function btnCheckNet(){
+	window.ccig.btnCheckNet(errorUrl);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layout.XY"
+    android:background="@drawable/address_dialog_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        style="@style/layout.Xy"
+        android:background="@color/gray_bg1" >
+
+        <TextView
+            android:id="@+id/txt_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="15dip"
+            android:text="@string/ccigmall_pw_close"
+            android:textColor="@color/main_red"
+            android:textSize="@dimen/default_big_size_1" />
+
+        <TextView
+            android:id="@+id/txt_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="15dip"
+            android:text="@string/ok"
+            android:textColor="@color/main_red"
+            android:textSize="@dimen/default_big_size_1" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dip"
+        android:layout_marginTop="15dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <com.adult.android.view.widget.WheelView
+            android:id="@+id/id_province"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1" >
+        </com.adult.android.view.widget.WheelView>
+
+        <com.adult.android.view.widget.WheelView
+            android:id="@+id/id_city"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1" >
+        </com.adult.android.view.widget.WheelView>
+
+        <com.adult.android.view.widget.WheelView
+            android:id="@+id/id_district"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1" >
+        </com.adult.android.view.widget.WheelView>
+    </LinearLayout>
+
+</LinearLayout>

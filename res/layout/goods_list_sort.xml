@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.adult.android.view.GoodsListSort xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gls_sort_mode"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/ll_sort_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_sort_all"
+            style="@style/goods_sort_bg_style" >
+
+            <TextView
+                android:id="@+id/tv_sort_all"
+                style="@style/goods_sort_name_style"
+                android:text="综合"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/goods_sort_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_sort_sales"
+            style="@style/goods_sort_bg_style" >
+
+            <TextView
+                android:id="@+id/tv_sort_sales"
+                style="@style/goods_sort_name_style"
+                android:text="销量"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/goods_sort_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_sort_price"
+            style="@style/goods_sort_bg_style" >
+
+            <TextView
+                android:id="@+id/tv_sort_price"
+                style="@style/goods_sort_name_style"
+                android:text="价格"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_sort_price_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dip"
+                android:layout_toLeftOf="@+id/tv_sort_price"
+                android:src="@drawable/sort_price_none" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/goods_sort_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_sort_putime"
+            style="@style/goods_sort_bg_style" >
+
+            <TextView
+                android:id="@+id/tv_sort_putime"
+                style="@style/goods_sort_name_style"
+                android:text="新品"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_sort_down_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_sort_layout"
+        android:src="@drawable/goods_sort_down_line" />
+
+    <com.adult.android.view.ScrollLayout
+        android:id="@+id/sort_selected_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/iv_sort_down_line" >
+
+        <ImageView
+            android:id="@+id/iv_sort_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#663399" />
+    </com.adult.android.view.ScrollLayout>
+
+</com.adult.android.view.GoodsListSort>

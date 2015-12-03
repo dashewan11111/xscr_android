@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="155dp"
+    android:background="@color/white">
+    
+     <RelativeLayout
+          android:layout_width="124dip"
+        android:layout_height="124dp"
+        android:orientation="horizontal"
+        android:id="@+id/product_list"
+        android:layout_centerVertical="true">
+ 	<ImageView
+        android:id="@+id/product_image"
+        android:layout_width="124dip"
+        android:layout_height="124dip"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_default_114"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"/>
+ 
+    <ImageView 
+        android:id="@+id/promote"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_list_deseno"
+        android:layout_marginLeft="12dp"
+        android:visibility="gone"/>
+
+ 	</RelativeLayout>
+
+    <LinearLayout 
+         android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/product_list"
+        android:layout_alignParentRight="true"
+  		android:layout_centerVertical="true"
+  		android:layout_marginLeft="12dip">
+  		
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+  			android:layout_marginTop="12dip" >
+             <ImageView 
+                 	android:id="@+id/flag"
+                  	android:layout_width="40dip"
+        			android:layout_height="30dip"
+        			android:layout_alignParentLeft="true"
+        			android:src="@drawable/img_default_114" 
+        			android:layout_centerInParent="true"/>
+          <LinearLayout 
+              android:layout_toRightOf="@id/flag"
+               	android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:orientation="vertical"
+        		android:layout_centerInParent="true"
+        		android:layout_marginLeft="4dip">
+             <TextView
+                 	android:id="@+id/country"
+                  	android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:text="Japan"
+        			android:textSize="12sp"
+        			android:textColor="@color/grey_font_color"/>
+             <TextView 
+                 	android:id="@+id/detail"
+                  	android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:textSize="12sp"
+        			android:textColor="@color/bg_title_bar"/>
+         </LinearLayout>
+        </RelativeLayout>
+        
+        
+        <TextView 
+            android:id="@+id/product_name"
+             android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:maxLines="2"
+        	android:ellipsize="end"
+        	android:layout_marginTop="8dp"
+        	android:textSize="15sp"
+        	android:textColor="@color/font_color"/>
+        
+         <LinearLayout 
+            android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:layout_marginTop="8dp">
+             <TextView 
+                 	android:id="@+id/price"
+                  	android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:textColor="@color/red" 
+        			android:text="164"
+        			android:textSize="20sp"
+        			android:layout_gravity="center_vertical"/>
+  
+             <TextView 
+                 	android:id="@+id/foreign_price"
+                  	android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:text="(约23PI)"
+        			android:textSize="15sp"
+        			android:layout_gravity="center_vertical"
+        			android:textColor="@color/mid_grey_font_color"
+        			android:layout_marginLeft="12dip" />
+         
+        </LinearLayout>
+        
+             <LinearLayout 
+                 	android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:orientation="horizontal"
+        			android:layout_marginTop="8dp"
+        			android:layout_marginBottom="8dp">
+             <TextView 
+                 	android:id="@+id/home_price"
+                  	android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:text="国内参考价格"
+        			android:textSize="15sp"
+        			android:textColor="@color/mid_grey_font_color"/>
+             <TextView 
+                 	android:id="@+id/home_price_detail"
+                  	android:layout_width="wrap_content"
+        			android:layout_height="wrap_content"
+        			android:layout_marginLeft="12dip"        
+        			android:text="230"
+        			android:textSize="15sp"
+        			android:textColor="@color/mid_grey_font_color"/>
+             
+             </LinearLayout>
+
+        
+    </LinearLayout>
+
+    
+  
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.Xy"
+    android:layout_gravity="center"
+    android:background="@drawable/common_round_conner_bg_white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/order_cancel_dialog_content_container"
+        style="@style/layout.Xy"
+        android:gravity="center"
+        android:paddingBottom="15dip"
+        android:paddingTop="15dip" >
+
+        <TextView
+            android:id="@+id/order_cancel_dialog_default_content_tv"
+            style="@style/layout.Xy"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/order_cancel_dialog_default_buttons_ll"
+        style="@style/layout.Xy"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:background="@color/gray_line1" />
+
+        <LinearLayout
+            style="@style/layout.Xy"
+            android:layout_height="55dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/order_cancel_dialog_default_button_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/default_size" />
+
+            <View
+                android:id="@+id/order_cancel_dialog_default_button_dividing_line"
+                android:layout_width="0.7dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line1" />
+
+            <TextView
+                android:id="@+id/order_cancel_dialog_default_button_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/default_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

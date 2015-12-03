@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.Xy"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/line_gray_full" />
+
+    <LinearLayout
+        style="@style/layout.Xy"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="8dp" >
+
+        <RelativeLayout style="@style/layout.Xy" >
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/RatingBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_centerVertical="true"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="1" />
+
+            <LinearLayout
+                style="@style/layout.xy"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/layout.xy"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:ellipsize="middle"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="用户姓名"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/time"
+                    style="@style/order_list_item_text"
+                    android:singleLine="true"
+                    android:text="2015-03-02"
+                    android:textSize="13sp"
+                    android:textColor="@color/gray_2" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/content"
+            style="@style/order_list_item_text"
+            android:layout_marginTop="5dp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textSize="@dimen/default_size"
+            android:text="商品很好"
+            android:textColor="@color/gray_3" />
+    </LinearLayout>
+
+</LinearLayout>

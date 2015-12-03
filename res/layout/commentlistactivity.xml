@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res-auto"
+    style="@style/layout.XY"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/layout.XY"
+        android:orientation="vertical" >
+
+        <include layout="@layout/layout_product_comment_list_tab" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/product_comment_list_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/gray_bottom_bg"
+            android:dividerHeight="0.7dp"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:focusable="true"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:listSelector="@color/transparent"
+            android:scrollbars="none"
+            android:smoothScrollbar="true"
+            ptr:ptrMode="both" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/comment_list_no_data"
+        layout="@layout/layout_no_my_comment"
+        android:visibility="gone" />
+
+</FrameLayout>

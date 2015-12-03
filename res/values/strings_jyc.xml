@@ -1,0 +1,152 @@
+<resources>
+
+    <string name="order_item_order_number">订单编号：</string>
+    <string name="order_item_order_type">订单类型：</string>
+    <string name="order_item_order_amount">订单金额：</string>
+    <string name="order_item_order_time">下单时间：</string>
+    <string name="order_item_order_status">状态：</string>
+    <string name="order_status_up_pay">待支付</string>
+    <string name="order_status_up_reveived">待收货</string>
+    <string name="order_status_cancel">已取消</string>
+    <string name="order_status_finish">已完成</string>
+    <string name="order_item_pay_now">立即支付</string>
+    <string name="order_item_confirm_received">确认收货</string>
+    <string name="order_item_add_comment">去评论</string>
+    <string name="renminbi">¥%1$s</string>
+    <string name="order_number">订单编号:%1$s</string>
+    <string name="order_time">订单时间:%1$s</string>
+    <string name="product_info">商品信息</string>
+    <string name="package_id_format">包裹单号:%1$s</string>
+    <string name="data_error">数据错误，请重试.</string>
+    <string name="data_load_error">数据加载错误啦，请重试！</string>
+    <string name="please_retry">请重试</string>
+    <string name="pay_method">支付方式</string>
+    <string name="all_products_amount">商品总额：</string>
+    <string name="order_freight">运&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;费：</string>
+    <string name="order_tax">税&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;费：</string>
+    <string name="login_password">密码:</string>
+    <string name="renzheng_name">姓&#160;&#160;&#160;&#160;名:</string>
+    <string name="login_user_name">账号:</string>
+    <string name="tax">税费：</string>
+    <string name="order_amount">订单金额：</string>
+    <string name="order_total_number">共%1$s件商品</string>
+    <string name="order_discount">优惠金额：¥</string>
+    <string name="order_coupon">优惠券：¥</string>
+    <string name="order_operation_pay_now">立即支付</string>
+    <string name="order_operation_cancel_order">取消订单</string>
+    <string name="order_operation_confirm_receipt">确认收货</string>
+    <string name="order_operation_confirm_receipt_info">请确认已经收到货物，再点击确认！</string>
+    <string name="order_operation_confirm_receipt_success">确认收货成功！</string>
+    <string name="order_operation_comment_now">去评论</string>
+    <string name="order_operation_comment_already">已评论</string>
+    <string name="order_operation_view_logistics">查看物流</string>
+    <string name="logistics_waybillno">运单号：%1$s</string>
+    <string name="new_address">新建地址</string>
+    <string name="save_use_address">保存</string>
+    <string name="set_default_address">设为默认地址</string>
+    <string name="comment_all_number">全部(%1$s)</string>
+    <string name="comment_good_number">好评(%1$s)</string>
+    <string name="comment_ok_number">中评(%1$s)</string>
+    <string name="comment_bad_number">差评(%1$s)</string>
+    <string name="comment_good">好评</string>
+    <string name="comment_ok">中评</string>
+    <string name="comment_bad">差评</string>
+    <string name="brackets_number">(%1$s)</string>
+    <string name="percentage">%</string>
+    <string name="good_rate">好评度</string>
+    <string name="loading_address_list">正在加载地址列表</string>
+    <string name="product_detail_text_1">100%正品保障</string>
+    <string name="product_detail_text_2">100%海外直供</string>
+    <string name="activity_title_order_detail">订单详情</string>
+    <string name="activity_title_products_list">商品信息</string>
+    <string name="activity_title_comment_list">评论列表</string>
+    <string name="activity_title_logistics">查看物流</string>
+    <string name="activity_title_receive_address_list">收货地址</string>
+    <string name="activity_title_add_address">新建收货地址</string>
+    <string name="activity_title_edit_address">编辑收货地址</string>
+    <string name="activity_title_product_comments">商品评价</string>
+    <string name="activity_title_setting">设置</string>
+    <string name="activity_title_my_order">我的订单</string>
+    <string name="click_try_again">点击后重试</string>
+    <string name="order_finish">订单收货成功</string>
+    <string name="edit_product_number">修改购买数量</string>
+    <string name="new_version">鑫世界%1$s新版发布</string>
+    <string name="taxation_explain">税费说明</string>
+    <string name="my_account">我的账户</string>
+    <string name="please_input_number">请填写数量</string>
+    <string name="number_less_than_0">数量必须大于0</string>
+    <string name="taxation_explain_content">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;以订单全部商品实际销售价格作为完税价格（征税基数），参照行邮税税率征收税款。应征税额在50元（含50元）以下的，海关予以免征。订单每次限值为1000元人民币，超出规定限值的，应按照货物规定办理通关手续。但单次购买仅有一件商品且不可分割的，虽超出规定限值，经海关审核确属个人自用的，可以参照个人物品规定办理通关手续。</string>
+    <string name="add_to_shop_cart">加入购物车</string>
+    <string name="buy_right_now">立即购买</string>
+    <string name="share_title_before">[鑫世界、畅购全球]仅售</string>
+    <string name="share_title_after">元！</string>
+    <string name="share_content_desc">我觉得鑫世界的这个商品挺赞的，赶快来看看吧。</string>
+    <string name="share_layout_cancel">取消</string>
+    <string name="share_wechat_platform">微信好友</string>
+    <string name="share_wechat_moments_platform">微信朋友圈</string>
+    <string name="share_sina_platform">新浪微博</string>
+    <string name="share_qq_platform">QQ好友</string>
+    <string name="share_qzone_platform">QQ空间</string>
+    <string name="act_share_title">鑫世界，畅购全球</string>
+    <string name="act_share_context">我在鑫世界发现了这个，赶紧来看看吧</string>
+    <string name="qq_not_installed">您尚未安装QQ客户端，无法进行分享</string>
+    <!-- 各个平台分享的提示语 -->
+    <string name="share_cancel">分享取消</string>
+    <string name="share_success">分享成功</string>
+    <string name="share_error">分享错误</string>
+    <string name="wechat_version_too_low">微信版本过低，不支持朋友圈分享，请更新版本</string>
+    <string name="wechat_not_installed">请安装微信客户端，再进行分享</string>
+    <!-- 第三方登录或者分享时提示 -->
+    <string name="login_wx_cancel">授权取消</string>
+    <string name="login_wx_success">授权成功</string>
+    <string name="login_wx_error">授权错误</string>
+    <string name="outdate_login_again">您的登录身份已过期，请重新登录</string>
+    <string name="nick_or_phone_num">用户名/手机号</string>
+    <string name="login_login_hint">登 录</string>
+    <string name="wechat_login">微信登录</string>
+    <string name="qq_login">QQ登录</string>
+    <string name="sina_login">微博登录</string>
+    <!-- 登录时未输入用户名时提示 -->
+    <string name="login_nick_name_empty">请输入用户名</string>
+    <!-- 登录时用户名输入中文时 -->
+    <string name="name_chinese_error">用户名不能包含中文，请重新输入</string>
+    <!-- 登录时用户名限制 -->
+    <string name="name_lengh_limit">用户名为6~20个字符</string>
+    <!-- 登录时密码限制 -->
+    <string name="pwd_lengh_limit">密码为6~20个字符</string>
+    <!-- 登录时密码输入中文时提示 -->
+    <string name="pwd_chinese_error">密码不能包含中文，请重新输入</string>
+    <!-- 登录、修改密码时，设置密码与用户名相同时 -->
+    <string name="pwd_name_same_error">用户名和密码不能相同</string>
+    <!-- 登录时，获取用户信息成功 -->
+    <string name="get_user_info_success">获取用户信息成功</string>
+    <string name="login_success">登录成功</string>
+    <string name="share">分享</string>
+    <string name="home_hint">首页</string>
+    <string name="local_address_no_goods">当前区域无货</string>
+    <string name="now_has_goods">现货</string>
+    <string name="free_express">包邮</string>
+    <string name="piece">件</string>
+    <!-- 添加购物车时商品售罄提示 -->
+    <string name="product_no_stock">商品已售罄，请选择其他商品</string>
+    <string name="add_shop_car_success">商品添加购物车成功</string>
+    <!-- 添加购物车报错 -->
+    <string name="add_shop_car_error">商品添加购物车发生网络错误，请重试</string>
+    <!-- 未选择商品规格时提示 -->
+    <string name="select_product_hint">请选择商品规格</string>
+    <string name="ccigmall_pw_close">关闭</string>
+    <string name="unknown">未知</string>
+    <string name="tax_rate">税率:</string>
+    <string name="input_phone_num_hint">请输入电话号码</string>
+    <string name="num_hint">数量</string>
+    <!-- 购物车处理时 -->
+    <string name="cart_select_on_at_least">请至少选择一件商品</string>
+    <!-- 添加购物车时 -->
+    <string name="more_than_left_max_num">已是最大库存剩余量</string>
+    <string name="to_up_details">上拉看图文详情</string>
+    <string name="user_name_hint">用户姓名</string>
+    <string name="send_limit_time">现在下单，24小时之内发货</string>
+    <string name="promotion_count_down">倒计时:</string>
+    <string name="flash_buy_count_down">闪购倒计时:</string>
+
+</resources>

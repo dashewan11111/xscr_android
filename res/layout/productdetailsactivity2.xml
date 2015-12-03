@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.XY"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        style="@style/layout.XY"
+        android:layout_weight="1.0"
+        android:background="@color/black" >
+
+        <com.adult.android.view.MyScrollView
+            android:id="@+id/product_details2_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                style="@style/layout.XY"
+                android:background="@color/gray_bottom_bg"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical" >
+
+                <include layout="@layout/layout_view_pager" />
+
+                <include layout="@layout/layout_product_info" />
+
+                <include layout="@layout/layout_product_comment" />
+
+                <include layout="@layout/layout_product_wap_detail" />
+            </LinearLayout>
+        </com.adult.android.view.MyScrollView>
+
+        <include layout="@layout/layout_trans_top_bar" />
+    </FrameLayout>
+
+    <include layout="@layout/layout_product_details_bottom_actions" />
+
+    <View
+        android:id="@+id/pop_base_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+</LinearLayout>

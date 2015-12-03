@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+    <View
+        android:id="@+id/scrolltab_viewSetting"
+        android:layout_width="fill_parent"
+        android:layout_height="3dip"
+        android:layout_below="@+id/scrolltab_llyt_tabs"
+        android:layout_marginTop="-4dip"
+        android:background="#999" />
+    <LinearLayout
+        android:id="@+id/scrolltab_llyt_tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white" >
+    </LinearLayout>
+    <com.adult.android.view.MyViewPager
+        android:id="@+id/scrolltab_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/scrolltab_viewSetting" />
+
+</RelativeLayout>

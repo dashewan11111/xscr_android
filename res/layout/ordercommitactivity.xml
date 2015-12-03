@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.XY"
+    android:orientation="vertical" >
+
+    <ScrollView
+        style="@style/layout.XY"
+        android:layout_weight="1.0"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            style="@style/layout.XY"
+            android:background="@color/gray_bottom_bg"
+            android:orientation="vertical" >
+
+            <include layout="@layout/layout_address_info" />
+
+            <LinearLayout
+                android:id="@+id/order_commit_prodcut_container"
+                style="@style/layout.Xy"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dip" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/order_commit_prodcut_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dip"
+                android:background="@drawable/common_round_conner_bg_white"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="显示其余3件"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <TextView
+                style="@style/layout.Xy"
+                android:layout_marginTop="10dip"
+                android:padding="10dip"
+                android:text="支付方式"
+                android:textSize="12sp" />
+
+            <include layout="@layout/layout_pay_method" />
+
+            <TextView
+                style="@style/layout.Xy"
+                android:layout_marginTop="10dip"
+                android:padding="10dip"
+                android:text="结算详情"
+                android:textSize="12sp" />
+
+            <include layout="@layout/layout_sum_details" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/line_gray_full" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="应付："
+            android:textColor="@color/gray"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/order_commit_shoud_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dip"
+            android:textColor="@color/red"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/order_commit_trans_fee_included"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dip"
+            android:layout_weight="1.0"
+            android:text="(已免运费)"
+            android:textColor="@color/gray"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/order_commit_btn_commit"
+            android:layout_width="100dip"
+            android:layout_height="35dip"
+            android:background="@drawable/common_round_conner_bg_red"
+            android:text="提交订单"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

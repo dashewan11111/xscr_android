@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- PullToRefresh -->
+    <string name="pull_to_refresh_pull_label">向下拖动画面&#8230;</string>
+    <string name="pull_to_refresh_release_label">手指松开后更新</string>
+    <string name="pull_to_refresh_refreshing_label">读入中&#8230;</string>
+    <string name="pull_to_refresh_from_bottom_pull_label">向上拖动画面&#8230;</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+
+    <!-- PagedDragDropGrid -->
+    <string name="removeItem">Remove</string>
+    <string name="app_name">秀色成人</string>
+    <string name="menu_settings">Settings</string>
+
+    <!-- 左侧和顶部导航按钮 -->
+    <string name="string_home_page">主页</string>
+    <string name="string_promotion_page">促销</string>
+    <string name="string_tuihuan_order">退换货</string>
+    <string name="string_category_page">分类</string>
+    <string name="string_community">社区</string>
+    <string name="string_my_ccigmall">我的</string>
+    <string name="string_account_safe">账户安全</string>
+    <string name="string_product_order">填写订单</string>
+    <string name="string_product_details">商品详情</string>
+    <string name="string_order_pay">订单支付</string>
+    <string name="string_order_pay_success">订单支付成功</string>
+    <string name="string_invoice_info">发票信息</string>
+    <string name="string_validate_phone_number">手机验证</string>
+    <string name="string_my_coupon">我的优惠券</string>
+    <string name="string_product_evaluate">商品评价</string>
+    <string name="string_buy_good_list">商品清单</string>
+    <string name="string_all_order">全部订单</string>
+    <string name="string_need_pay_order">待支付订单</string>
+    <string name="string_need_confirm_order">待收货订单</string>
+    <string name="string_order_detail">订单详情</string>
+    <string name="string_feedback">意见反馈</string>
+    <string name="string_renzheng">实名认证</string>
+    <string name="string_add_new_address">新建收货地址</string>
+    <string name="string_title_login">用户登录</string>
+    <string name="string_find_psd">忘记密码？</string>
+    <string name="string_title_register">注       册</string>
+    <string name="agreement">鑫世界用户注册协议</string>
+    <string name="agreement_1">《鑫世界用户注册协议》</string>
+    <string name="string_setting">设置</string>
+    <string name="property_picture_menu_select">图片选择</string>
+    <string name="property_picture_menu_camera">启动相机</string>
+    <string name="product_filter_clear">清除条件</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="exit">退出</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="add">添加</string>
+    <string name="modify">修改</string>
+    <string name="upgrade">升级</string>
+    <string name="delete">删除</string>
+    <string name="operation_option">操作</string>
+    <string name="prompt">提示</string>
+    <string name="retry">重试</string>
+    <string name="back">返回</string>
+    <string name="string_already_sold">已售出</string>
+    <string name="string_solding_shop">家店铺在售</string>
+    <string name="string_exchange_goods">退换货</string>
+    <string name="string_apply_exchange_goods">申请退换货</string>
+    <string name="submit_order_btn">提交订单</string>
+    <string name="product_order_yunfei">运 费：</string>
+    <string name="goods_amount_hint">商品金额：</string>
+    <string name="remark_content_limit">备注限制在45个字内</string>
+    <!-- 提交订单时未选择收货地址 -->
+    <string name="product_order_address_empty">请选择收货地址</string>
+    <string name="order_submit_success">订单提交成功</string>
+    <string name="get_address_fail">获取地址失败</string>
+    <string name="zhang_can_use">张可用</string>
+    <string name="has_off_shelf">已下架</string>
+    <string name="price_not_right">价格与实际不符</string>
+    <string name="tax_rate_error">税率与实际不符</string>
+    <string name="tax_error">税额与实际不符</string>
+    <string name="low_stock">库存不足</string>
+    <string name="more_than_max_money">超过最大允许购买金额</string>
+    <string name="ccigmall_dialog_title">鑫网提示</string>
+    <string name="need_to_auth_hint">"免税店商品需要办理入境申报，请您配合进行实名认证"</string>
+    <string name="product_not_enough">商品已下架或库存不足</string>
+    <string name="renminbi_negative">-¥%1$s</string>
+    <string name="order_number">订单编号：%1$s</string>
+    <string name="order_time">订单时间：%1$s</string>
+    <string name="product_info">商品信息</string>
+    <string name="package_id_format">包裹单号:%1$s</string>
+    <string name="order_single_the_order_total">本单合计</string>
+    <string name="order_single_taxation">税费</string>
+    <string name="order_single_freight">运费</string>
+    <string name="product_sum_hint">商品金额</string>
+    <string name="remark_hint">备 注：</string>
+    <!-- 水印字符 -->
+    <string name="string_hint_search">请输入关键字</string>
+    <string name="string_hint_login_user">请输入用户名</string>
+    <string name="string_hint_login_pas">请输入密码</string>
+    <!-- 评论字数限制 -->
+    <string name="more_than_45">字数超过限制，请保持在45个字符之内</string>
+    <!-- 注册 -->
+    <string name="string_regist_phone_number">手机号</string>
+    <string name="string_regist_get_code">获取验证码</string>
+    <string name="string_regist_next">下一步</string>
+    <string name="string_regist_input_code">请输入验证码</string>
+    <string name="string_regist_username">用户名</string>
+    <string name="string_regist_password">密码</string>
+    <string name="string_regist_password_confirm">确认密码</string>
+    <!-- 登录 -->
+    <string name="string_login">登录</string>
+    <string name="string_regist">注册</string>
+    <string name="oneMoreTimePress">再次返回退出</string>
+    <string name="string_remember_pass">记住密码</string>
+    <string name="string_forget_pass">忘记密码？</string>
+    <string name="string_already_read">我已阅读并同意</string>
+    <string name="string_xinwang_item">《鑫世界用户注册协议》</string>
+    <string name="string_login_digits">1234567890_abcdefghijklmnopqrstuvwxyzQWERTYUIOPLKJHGFDSAZXCVBNM</string>
+
+    <!-- Common -->
+    <string name="content_description">description</string>
+    <string name="message_task_in_process">读取中…</string>
+    <string name="common_exception">服务器发生异常</string>
+    <string name="common_exception_no_login">请先登录</string>
+    <string name="common_exception_no_permition">认证失败</string>
+    <string name="login_no_count">该账户不存在</string>
+    <string name="login_possword_uncrect">账户或密码不正确</string>
+    <string name="result_code_nodata">没有数据</string>
+    <string name="common_exit_confirm">确定要退出程序吗？</string>
+    <string name="common_logout_confirm">确定要注销吗？</string>
+    <string name="message_network_unreachable">网络连接不可用。</string>
+    <string name="message_connection_timeout">连接超时</string>
+    <string name="message_service_not_found">服务器没有响应</string>
+    <string name="message_service_exception">服务器异常</string>
+    <string name="message_unknown_exception">未知错误</string>
+    <string name="dialog_title_confirm">确定</string>
+    <string name="dialog_goto_authentic">去认证</string>
+    <string name="dialog_title_single_choice ">请选择</string>
+    <string name="dialog_title_input">请输入</string>
+    <string name="data_no_save_to_exit">数据没有保存,确认退出？</string>
+    <string name="network_not_available">网络不可用，请检查网络连接</string>
+    <string name="error_send_email">邮件发送失败</string>
+    <string name="error_code">验证码错误</string>
+    <string name="error_emial_null">邮箱不存在</string>
+    <string name="error_emial_has_registed">邮箱已被注册</string>
+    <string name="error_emial_null2">邮箱未注册</string>
+    <string name="message_update_confirm"> 发现新版客户端程序，请选择“确认”以启动浏览器进行下载。\r\n
+		下载完成后，请点击已下载的文件进行安装。如果安装失败，请将程序卸载后重试。</string>
+    <string name="message_retry">网络超时，重新加载</string>
+    <string name="default_ptr_footerview_look_more">查看更多</string>
+    <string name="default_ptr_footerview_ing">加载中...</string>
+    <string name="device_manager_input">设备号</string>
+    <string name="device_manager_title">设备管理</string>
+    <string name="device_manager_connection">连接设备</string>
+    <string name="single_title">下单</string>
+    <string name="single_no">订单编号</string>
+    <string name="orderpay_payment">支付</string>
+    <!-- 测试：898000156911002 00019130 生产：898000072990001  00000001 -->
+    <!-- 商用：898100048160104 88984808(047) -->
+    <!-- 商用：898100048160104 88984812(055) -->
+    <string name="merchant_id">898100048160104</string>
+    <string name="terminal_id">88984808</string>
+    <string name="mpos_callback">插件回传信息：</string>
+    <string name="pay_success_voucher_fail">支付成功，但请重新签名</string>
+    <string name="pay_success">支付成功</string>
+    <string name="pay_fail">支付失败：</string>
+    <string name="single_success">下单成功，订单号为：</string>
+    <string name="single_fail">下单失败：</string>
+
+    <!-- 设置画面 -->
+    <string name="setting_count_manage">账户管理</string>
+    <string name="setting_password_change">修改密码</string>
+    <string name="setting_version_info">版本信息</string>
+    <string name="setting_text_size">字体大小</string>
+    <string name="setting_cache_clear">清除缓存</string>
+    <string name="setting_logout">注销</string>
+    <string name="setting_account_detail_info">账户管理</string>
+    <string name="setting_account_basic_info">基本信息</string>
+    <string name="setting_btn_upload_avator">上传头像</string>
+    <string name="setting_account_name">姓名:</string>
+    <string name="setting_account_phone_num">电话:</string>
+    <string name="setting_account_email">Email:</string>
+    <string name="setting_account_fox">传真</string>
+    <string name="setting_account_address">地址:</string>
+    <string name="setting_account_instruction">个人说明</string>
+    <string name="setting_account_edit">账户编辑</string>
+    <string name="setting_account_info_btn_authentic">提交认证</string>
+    <string name="setting_account_info_btn_save">保存</string>
+    <string name="setting_account_info_btn_edit">编辑</string>
+    <string name="setting_account_edit_must">(认证必填)</string>
+    <string name="setting_app_version">版本信息</string>
+    <string name="setting_app_version_check">版本检查</string>
+    <string name="setting_app_version_code">版本</string>
+    <string name="setting_app_version_copyright">版权</string>
+    <string name="setting_app_version_copyright_txt">大连华信计算机技术股份有限公司</string>
+
+    <!-- 一级类目 -->
+    <string-array name="category_level_1">
+        <item>热卖美食</item>
+        <item>美容护理</item>
+        <item>开店必备</item>
+        <item>家装家居厨房</item>
+        <item>新锐品牌</item>
+        <item>玩具-运动-汽车用品</item>
+        <item>办公小食</item>
+        <item>办公用品</item>
+        <item>健康食尚</item>
+        <item>母婴、婴儿玩具</item>
+        <item>服装服饰</item>
+        <item>鞋靴</item>
+        <item>皮具箱包</item>
+    </string-array>
+
+    <string name="bottom_home_title">首页</string>
+    <string name="bottom_category_title">分类</string>
+    <string name="string_cars">购物车</string>
+    <string name="search">搜索</string>
+    <string name="search_hot">热门搜索</string>
+    <string name="search_history">最近搜索</string>
+    <string name="search_hint">搜索你感兴趣的商品</string>
+    <string name="btn_filter">筛选</string>
+    <string name="pop_brand">品牌</string>
+    <string name="pop_origin">产地</string>
+    <string name="pop_price">价格</string>
+    <string name="pop_block">库存</string>
+    <string name="about">约</string>
+    <string name="all">全部</string>
+    <string name="input_end">请输入价格</string>
+    <string name="home_higher_price">国内参考价格</string>
+    <string name="countrys">全球</string>
+    <string name="categories">品类</string>
+    <string name="empty_content_text">您还没有订单哦~</string>
+    <string name="empty_exchange_goods_text">您没有可退换的货物哦~</string>
+    <string name="product_list_title">商品列表</string>
+    <string name="product_sort_sort">排序</string>
+    <string name="product_sort_classify">品牌</string>
+    <string name="product_sort_place">原产地</string>
+    <string name="product_sort_select">筛选</string>
+    <string name="sort_select_sale">优惠</string>
+    <string name="sort_select_price">价格</string>
+    <string name="sort_delect_select">清除</string>
+    <string name="sort_new_product">最新</string>
+
+    <!-- 人民币符号 -->
+    <string name="rmb">¥</string>
+
+    <!-- 美元 -->
+    <string name="dollar">$</string>
+
+    <!-- 英镑 -->
+    <string name="pound">£</string>
+
+    <!-- 欧元 -->
+    <string name="euro">€</string>
+    <string name="hint_receive_name">请输入您的姓名</string>
+    <string name="hint_receive_mobile">请输入您的手机号码</string>
+    <string name="hint_receive_aera">请选择</string>
+    <string name="hint_receive_detail">请输入您的详细地址</string>
+    <string name="viewpager_indicator"><xliff:g>%d</xliff:g>/<xliff:g>%d</xliff:g></string>
+    <string name="select_all">全选</string>
+    <string name="cart_sale_btn">结算</string>
+    <string name="total_money_hint">总金额：</string>
+    <!-- 添加购物车时商品售罄提示 -->
+    <string name="product_no_stock">商品已售罄，请选择其他商品</string>
+    <string name="cart_operation_failed">操作失败，请重试.</string>
+    <string name="cart_more_than_inventory">商品数量超过库存，请减少数量</string>
+    <string name="none" />
+    <string name="more">更多</string>
+    <string name="edit">编辑</string>
+    <string name="finish">完成</string>
+    <string name="remarks">备注：</string>
+    <string name="app_tip">提示</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="more_than_max_num">已达最高限制</string>
+    <string name="product_no_act">不参与活动</string>
+    <string name="man_fan">满返</string>
+    <string name="man_zeng">满赠</string>
+    <string name="man_jian">满减</string>
+    <string name="mai_zeng">买赠</string>
+    <string name="zhi_jiang">直降</string>
+    <string name="cart_promotion">促销优惠</string>
+    <string name="lose_efficacy">失效</string>
+    <string name="cart_giveaway_tag">[赠品]</string>
+    <string name="cart_delete_confirm">确认要删除这%1$s种商品吗？</string>
+    <string name="go_on">继续</string>
+    <string name="reselection">重新选择</string>
+    <string name="app_guide">鑫世界提示</string>
+    <string name="string_help">帮助中心</string>
+    <string name="low_stocks">赠品库存不足，是否继续下单</string>
+    <string name="cart_invalid_point_out">失效提示</string>
+    <string name="cart_invalid_product">失效商品</string>
+    <!-- 购物车处理时 -->
+    <string name="single_order_money_limit">根据海关规定，单笔订单总价不可以超过1000元，如果单笔订单为一件且不可分割的商品除外。</string>
+    <string name="cart_select_on_at_least">请至少选择一件商品</string>
+    <string name="cart_sum_button_text">结算(%1$s)</string>
+    <string name="register_login_again">你已注册登录，不能重复操作</string>
+    <string name="add_shop_car_success">商品添加购物车成功</string>
+    <!-- 添加购物车报错 -->
+    <string name="add_shop_car_error">商品添加购物车发生网络错误，请重试</string>
+    <string name="can_use_coupon">张可用优惠券</string>
+    <string name="unuse_coupon">张未使用优惠券</string>
+    <string name="outdate_coupon">张已过期优惠券</string>
+    <string name="used_coupon">张已使用优惠券</string>
+    <!-- 优惠券被别的订单用时 -->
+    <string name="use_by_other_order">该优惠券已被其它订单使用</string>
+
+</resources>

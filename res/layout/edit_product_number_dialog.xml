@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.Xy"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <com.adult.android.view.MyEditText
+        android:id="@+id/edit_count_edit_text"
+        style="@style/layout.xy"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/address_dialog_background"
+    android:orientation="vertical" >
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:src="#7B2192" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:layout_marginTop="15dip"
+        android:orientation="horizontal" 
+        android:gravity="center_vertical">
+
+        <com.adult.android.view.widget.WheelView
+            android:id="@+id/id_province"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1">
+        </com.adult.android.view.widget.WheelView>
+
+        <com.adult.android.view.widget.WheelView
+            android:id="@+id/id_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1">
+        </com.adult.android.view.widget.WheelView>
+
+        <com.adult.android.view.widget.WheelView
+            android:id="@+id/id_district"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1" >
+        </com.adult.android.view.widget.WheelView>
+        
+    </LinearLayout>
+     <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:src="#E2E2E2" />
+
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/product_detail_tab"
+    style="@style/layout.Xy"
+    android:layout_marginTop="55dip"
+    android:background="@color/white" >
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:progress="0" />
+
+    <LinearLayout
+        android:id="@+id/ll_sort_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/progress_bar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/rl_sort_price"
+            style="@style/goods_sort_bg_style" >
+
+            <TextView
+                android:id="@+id/product_detail_tv_sort_price"
+                style="@style/goods_sort_name_style"
+                android:text="@string/string_product_info" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_sort_sales"
+            style="@style/goods_sort_bg_style" >
+
+            <TextView
+                android:id="@+id/product_detail_tv_sort_sales"
+                style="@style/goods_sort_name_style"
+                android:text="@string/string_product_parameter" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rl_sort_focus"
+            style="@style/goods_sort_bg_style" >
+
+            <TextView
+                android:id="@+id/product_detail_tv_sort_focus"
+                style="@style/goods_sort_name_style"
+                android:text="@string/string_product_notes" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_sort_layout"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center" >
+
+                <View
+                    android:id="@+id/producy_detail_tab_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/main_red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center" >
+
+                <View
+                    android:id="@+id/producy_detail_tab_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/main_red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center" >
+
+                <View
+                    android:id="@+id/producy_detail_tab_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/main_red" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dip"
+            android:background="@color/divider" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dip"
+        android:layout_alignParentTop="true"
+        android:background="@color/divider" />
+
+</RelativeLayout>

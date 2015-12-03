@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <color name="gray_1">#999999</color>
+    <color name="gray_2">#666666</color>
+    <color name="gray_3">#333333</color>
+    <color name="bottom_tab_text">#8c88ff</color>
+    <color name="gray_line1">#CCCCCC</color>
+    <color name="gray_bottom_bg">#f2f2f2</color>
+    <color name="gray_bg1">#eaeaea</color>
+    <color name="orange_commen">#FF7256</color>
+    <color name="transparent">#FFFFFFFF</color>
+    <color name="transparent_1">#E1FFFFFF</color>
+    <!-- 页面灰色背景 -->
+    <color name="gray_line">#ececf0</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="bbutton_danger">#ffd9534f</color>
+    <color name="bbutton_danger_edge">#ffffff</color>
+    <color name="bbutton_danger_pressed">#7B2192</color>
+    <color name="bbutton_danger_pressed_edge">#7B2192</color>
+    <color name="bbutton_danger_disabled">#a5d9534f</color>
+    <color name="bbutton_danger_disabled_edge">#a5d43f3a</color>
+    <color name="bbutton_info">#ff5bc0de</color>
+    <color name="bbutton_info_edge">#ffffff</color>
+    <color name="bbutton_info_pressed">#7B2192</color>
+    <color name="bbutton_info_pressed_edge">#7B2192</color>
+    <color name="bbutton_info_disabled">#a55bc0de</color>
+    <color name="bbutton_info_disabled_edge">#a546b8da</color>
+    <!-- 主体颜色 -->
+    <color name="main_text_color">#e63232</color>
+    <color name="cart_promotion_bg">#ffe6e6</color>
+    <!-- 主红颜色 -->
+    <color name="main_red">#e63232</color>
+    <color name="main_black_text">#505050</color>
+    <color name="main_activity_tab">#1e1e1e</color>
+    <!-- 黑色透明 -->
+    <color name="product_details_black_trans">#43000000</color>
+    <!-- 应用主题共通色调 -->
+    <color name="main_top_bg_color">#f2f2f2</color>
+
+</resources>

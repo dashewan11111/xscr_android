@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/common_header_main"
+    style="@style/common_header_style" >
+
+    <!-- 左边按钮区域 -->
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/common_header_left_button"
+            style="@style/common_header_image_button" />
+
+        <TextView
+            android:id="@+id/common_header_left_text"
+            style="@style/common_header_text_button" />
+
+        <TextView
+            android:id="@+id/common_header_left_message_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@color/red" />
+    </FrameLayout>
+
+    <!-- 中间标题区域 -->
+
+    <LinearLayout
+        android:id="@+id/common_header_middle_layout"
+        style="@style/common_header_middle_layout"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/common_header_middle_title"
+            style="@style/common_header_center_text_style" />
+    </LinearLayout>
+
+    <!-- 首页搜索 -->
+
+    <FrameLayout
+        android:id="@+id/common_header_middle_search"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:visibility="gone" >
+
+        <ImageView
+            style="@style/layout.Xy"
+            android:layout_height="match_parent"
+            android:src="@drawable/home_title_search" />
+
+        <TextView
+            style="@style/layout.xY"
+            android:layout_marginLeft="28dip"
+            android:gravity="center_vertical"
+            android:text="搜索你感兴趣的商品"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+    </FrameLayout>
+    <!-- 分类搜索 -->
+
+    <FrameLayout
+        android:id="@+id/common_header_middle_search_full"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:orientation="horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:visibility="gone" >
+
+        <ImageView
+            style="@style/layout.Xy"
+            android:layout_height="match_parent"
+            android:src="@drawable/home_title_search" />
+
+        <TextView
+            style="@style/layout.xY"
+            android:layout_marginLeft="35dip"
+            android:gravity="center_vertical"
+            android:text="搜索你感兴趣的商品"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+    </FrameLayout>
+    <!-- 右边按钮区域 -->
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/common_header_right_button"
+            style="@style/common_header_image_button" />
+
+        <TextView
+            android:id="@+id/common_header_right_text"
+            style="@style/common_header_text_button" />
+    </FrameLayout>
+
+</LinearLayout>

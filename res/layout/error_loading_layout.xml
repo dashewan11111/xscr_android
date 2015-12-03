@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.XY"
+    android:orientation="vertical" >
+
+    <!-- <LinearLayout
+        android:id="@+id/llyt_set_network"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp" 
+        android:background="#ff9999">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_wifi" />
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            style="@style/layout.xy"
+            android:text="网络请求失败，请检查您的网络设置"
+            android:textSize="15sp" 
+            android:textColor="@color/white"/>
+        <ImageView 
+			android:layout_width="18dp"
+			android:layout_height="18dp"
+            android:src="@drawable/ic_list_enter_white_normal"
+            />
+    </LinearLayout> -->
+
+    <LinearLayout
+        style="@style/layout.XY"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/no_order" />
+
+        <TextView
+            style="@style/order_list_item_text"
+            android:text="@string/data_load_error"
+            android:textColor="@color/gray_2" />
+
+        <Button
+            android:id="@+id/retry"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/common_frame_button_1"
+            android:text="@string/please_retry"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/default_size" />
+    </LinearLayout>
+
+</LinearLayout>

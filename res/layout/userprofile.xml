@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.XY"
+    android:background="@color/gray_bottom_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/user_profile_avator"
+        style="@style/layout.arraw"
+        android:layout_marginTop="10dip" >
+
+        <TextView
+            style="@style/text_black_12"
+            android:layout_weight="1.0"
+            android:text="头像" />
+
+        <ImageView
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:src="@drawable/default_user_avator_m" />
+
+        <ImageView
+            android:layout_width="7dip"
+            android:layout_height="14dip"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+    <include layout="@layout/line_gray_full" />
+
+    <LinearLayout
+        android:id="@+id/user_profile_nick"
+        style="@style/layout.arraw" >
+
+        <TextView
+            style="@style/text_black_12"
+            android:layout_weight="1.0"
+            android:text="昵称" />
+
+        <TextView
+            style="@style/text_black_12"
+            android:text="绿豆丸子" />
+
+        <ImageView
+            android:layout_width="7dip"
+            android:layout_height="14dip"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_profile_acount_safe"
+        style="@style/layout.arraw"
+        android:layout_marginTop="10dip" >
+
+        <TextView
+            style="@style/text_black_12"
+            android:layout_weight="1.0"
+            android:text="账号与安全" />
+
+        <ImageView
+            android:layout_width="7dip"
+            android:layout_height="14dip"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_profile_sexy"
+        style="@style/layout.arraw"
+        android:layout_marginTop="10dip" >
+
+        <TextView
+            style="@style/text_black_12"
+            android:layout_weight="1.0"
+            android:text="性别" />
+
+        <TextView
+            style="@style/text_black_12"
+            android:text="男" />
+
+        <ImageView
+            android:layout_width="7dip"
+            android:layout_height="14dip"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+    <include layout="@layout/line_gray_full" />
+
+    <LinearLayout
+        android:id="@+id/user_profile_age"
+        style="@style/layout.arraw" >
+
+        <TextView
+            style="@style/text_black_12"
+            android:layout_weight="1.0"
+            android:text="年龄" />
+
+        <TextView
+            style="@style/text_black_12"
+            android:text="25" />
+
+        <ImageView
+            android:layout_width="7dip"
+            android:layout_height="14dip"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+    <include layout="@layout/line_gray_full" />
+
+    <LinearLayout
+        android:id="@+id/user_profile_love"
+        style="@style/layout.arraw" >
+
+        <TextView
+            style="@style/text_black_12"
+            android:layout_weight="1.0"
+            android:text="性取向" />
+
+        <TextView
+            style="@style/text_black_12"
+            android:text="待完善" />
+
+        <ImageView
+            android:layout_width="7dip"
+            android:layout_height="14dip"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+    <include layout="@layout/line_gray_full" />
+
+    <LinearLayout
+        android:id="@+id/user_profile_marry"
+        style="@style/layout.arraw" >
+
+        <TextView
+            style="@style/text_black_12"
+            android:layout_weight="1.0"
+            android:text="婚姻情况" />
+
+        <TextView
+            style="@style/text_black_12"
+            android:text="待完善" />
+
+        <ImageView
+            android:layout_width="7dip"
+            android:layout_height="14dip"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+    <include layout="@layout/line_gray_full" />
+
+    <LinearLayout
+        android:id="@+id/user_profile_location"
+        style="@style/layout.arraw" >
+
+        <TextView
+            style="@style/text_black_12"
+            android:layout_weight="1.0"
+            android:text="所在地" />
+
+        <TextView
+            style="@style/text_black_12"
+            android:text="待完善" />
+
+        <ImageView
+            android:layout_width="7dip"
+            android:layout_height="14dip"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+    <include layout="@layout/line_gray_full" />
+
+    <LinearLayout
+        android:id="@+id/user_profile_level"
+        style="@style/layout.arraw"
+        android:layout_marginTop="10dip" >
+
+        <TextView
+            style="@style/text_black_12"
+            android:layout_weight="1.0"
+            android:text="等级" />
+
+        <TextView
+            style="@style/text_black_12"
+            android:text="1级" />
+
+        <ImageView
+            android:layout_width="7dip"
+            android:layout_height="14dip"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/arrow" />
+    </LinearLayout>
+
+</LinearLayout>

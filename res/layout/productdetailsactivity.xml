@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llyt_product_details"
+    style="@style/layout.XY"
+    android:background="@color/bottom" >
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_cart"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.adult.android.view.ScrollViewContainer
+                android:id="@+id/scrollview_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <com.adult.android.view.MyScrollView
+                    android:id="@+id/product_details_scrollview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:id="@+id/product_details_first_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <!-- 添加商品详情描述 -->
+
+                    </LinearLayout>
+                </com.adult.android.view.MyScrollView>
+
+                <com.adult.android.view.product.ProductDetailsSecondView
+                    android:id="@+id/prodcut_details_second_view"
+                    style="@style/layout.XY"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/product_detail_tab" />
+
+                    <FrameLayout
+                        android:id="@+id/product_details_web_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <!-- 添加商品详情描述、规格参数和购买须知 -->
+                    </FrameLayout>
+                </com.adult.android.view.product.ProductDetailsSecondView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:id="@+id/product_details_relyt_top_buttons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/purple" >
+
+                        <ImageView
+                            android:id="@+id/top_back_btn"
+                            android:layout_width="45dip"
+                            android:layout_height="45dip"
+                            android:layout_alignParentLeft="true"
+                            android:padding="5dip"
+                            android:src="@drawable/btn_actionbar_back_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dip"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="@string/string_product_details"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/default_big_size" />
+
+                        <ImageView
+                            android:id="@+id/top_menu_btn"
+                            android:layout_width="45dip"
+                            android:layout_height="45dip"
+                            android:layout_alignParentRight="true"
+                            android:padding="5dip"
+                            android:src="@drawable/ic_more" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.7dp"
+                        android:background="@color/divider" />
+                </LinearLayout>
+            </com.adult.android.view.ScrollViewContainer>
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgTop"
+        android:layout_width="@dimen/back_to_top_icon_size"
+        android:layout_height="@dimen/back_to_top_icon_size"
+        android:layout_above="@id/ll_cart"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dip"
+        android:layout_marginRight="15dip"
+        android:background="@drawable/icon_backup_selector"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/ll_cart"
+        style="@style/layout.Xy"
+        android:layout_height="@dimen/product_sort_select_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/item_white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <FrameLayout
+                android:id="@+id/shopping_cart_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_goods_details_cart_normal" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_cars_count"
+                    style="@style/sample_number_text"
+                    android:layout_gravity="top|right"
+                    android:layout_marginRight="4dip"
+                    android:layout_marginTop="2dip"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/img_add_shopping_cart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/main_red"
+                android:gravity="center"
+                android:text="@string/add_to_shop_cart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/default_size" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/img_onekey_buy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/main_red"
+                android:gravity="center"
+                android:text="@string/buy_right_now"
+                android:textColor="@color/white"
+                android:textSize="@dimen/default_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/attrBaseView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

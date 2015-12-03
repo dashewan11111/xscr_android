@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:orientation="vertical" >
+            <LinearLayout
+                android:paddingLeft="10dp"
+                 android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订单金额 : "
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/tuihuan_jineTet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_order_amount"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:textSize="18sp" />
+            </LinearLayout>
+             <LinearLayout
+                android:paddingLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下单时间: "
+                    android:textSize="@dimen/default_size" />
+                <TextView
+                    android:id="@+id/tuihuan_timeTet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2014-01-23 "
+                    android:textSize="@dimen/default_size" />
+            </LinearLayout>
+            <View 
+             style="@style/line2" 
+             android:layout_marginTop="15dp"
+                />
+</LinearLayout>

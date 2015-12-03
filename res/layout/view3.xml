@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/item_white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/all_view3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="65dp"
+        android:paddingTop="20dp"
+        android:text="@string/all"
+        android:textColor="@drawable/itemcolor"
+        android:background="@color/white"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/mydivider" />
+
+    <ListView
+        android:id="@+id/pricelist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/mydivider"
+        android:dividerHeight="2dp"
+        android:listSelector="@color/transparent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DCDCDC" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="12dip" >
+
+            <EditText
+                android:id="@+id/start_price"
+                android:layout_width="123dip"
+                android:layout_height="38dip"
+                android:background="@drawable/hot_background"
+                android:gravity="center"
+                android:hint="起始价格"
+                android:numeric="integer"
+                android:textColor="@color/grey_font_color" />
+
+            <ImageView
+                android:id="@+id/short_line"
+                android:layout_width="15dp"
+                android:layout_height="4dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/start_price"
+                android:background="#DCDCDC" />
+
+            <EditText
+                android:id="@+id/end_price"
+                android:layout_width="123dip"
+                android:layout_height="38dip"
+                android:layout_toRightOf="@id/short_line"
+                android:background="@drawable/hot_background"
+                android:gravity="center"
+                android:hint="终止价格"
+                android:numeric="integer"
+                android:textColor="@color/grey_font_color" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/priceRangeSure"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_height="38dip"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/corner_rectangle_purple"
+            android:text="@string/dialog_title_confirm"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

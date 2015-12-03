@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_normal_height"
+    android:orientation="horizontal" >
+	<include 
+        android:layout_width="@dimen/image_big_size"
+        android:layout_height="@dimen/image_big_size"
+        android:layout_margin="10dp"
+        layout="@layout/order_list_item_image_default"/>
+
+    <TextView
+        android:id="@+id/order_single_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/common_round_conner_bg_little_purple"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:id="@+id/apply_bt"
+        android:paddingBottom="5dp"
+        android:text="申请"
+        android:textColor="@color/white" />
+
+</LinearLayout>

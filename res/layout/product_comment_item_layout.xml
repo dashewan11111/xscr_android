@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.Xy"
+    android:orientation="vertical" >
+
+    <View
+        style="@style/layout.Xy"
+        android:layout_height="1dp"
+        android:background="@color/gray_line1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_normal_height"
+        android:orientation="horizontal" >
+
+        <include
+            android:layout_width="@dimen/image_big_size"
+            android:layout_height="@dimen/image_big_size"
+            android:layout_margin="10dp"
+            layout="@layout/order_list_item_image_default" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/product_name"
+                style="@style/order_list_item_text"
+                android:maxLines="2"
+                android:textColor="@color/gray_3" />
+
+            <TextView
+                android:id="@+id/product_count"
+                style="@style/order_list_item_text"
+                android:layout_alignParentBottom="true"
+                android:singleLine="true"
+                android:textColor="@color/gray_2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_margin="10dp" >
+
+            <TextView
+                android:id="@+id/product_price"
+                style="@style/order_list_item_text"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/red" />
+
+            <Button
+                android:id="@+id/product_button"
+                style="@style/layout.xy"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_normal_big"
+                android:padding="7dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/default_size"
+                android:text="@string/order_operation_comment_now" />
+            <Button
+                android:id="@+id/product_button_already"
+                style="@style/layout.xy"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_product_disable"
+                android:padding="7dp"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/default_size"
+                android:text="@string/order_operation_comment_already" />
+            
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.Xy"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <View
+        style="@style/layout.Xy"
+        android:layout_height="8dp"
+        android:background="@color/gray_bg1" />
+
+    <View
+        style="@style/layout.Xy"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_line1" />
+
+    <LinearLayout
+        android:id="@+id/logistics_content_view"
+        style="@style/layout.Xy"
+        android:orientation="vertical"
+        android:paddingLeft="8dp" >
+
+        <RelativeLayout style="@style/layout.Xy" >
+
+            <LinearLayout
+                style="@style/layout.Xy"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/header_icon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/user_default_icon" />
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/layout.xy"
+                    android:layout_width="wrap_content"
+                    android:ellipsize="middle"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+           <!--  <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/rating_bar"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:rating="1.5" /> -->
+            
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/RatingBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="1" />
+            
+            
+        </RelativeLayout>
+
+        <View
+            style="@style/layout.Xy"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_line1" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout.Xy"
+        android:layout_margin="8dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/content"
+            style="@style/order_list_item_text"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/default_size"
+            android:textColor="@color/gray_3" />
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/order_list_item_text"
+            android:textSize="@dimen/default_size_moderate"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/gray_1" />
+    </LinearLayout>
+
+    <View
+        style="@style/layout.Xy"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_line1" />
+
+</LinearLayout>

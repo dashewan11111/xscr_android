@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+     <LinearLayout
+        android:id="@+id/search_result_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/hot_text_result"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:paddingLeft="5.0dip"
+            android:layout_weight="1"
+            android:text="@string/search_hot"
+             android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" 
+            android:background="@drawable/personel_list_item_bg_selector"/>
+
+        <TextView
+            android:id="@+id/history_text_result"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="5.0dip"
+            android:text="@string/search_history"
+            android:textColor="@color/black"
+            android:textSize="20sp" 
+            android:background="@drawable/personel_list_item_bg_selector"/>
+    </LinearLayout>
+
+    <!-- 下划线 -->
+
+    <LinearLayout
+        android:id="@+id/line_layout_result"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <View
+            android:id="@+id/line_one_result"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@color/lightgray" />
+
+        <View
+            android:id="@+id/line_two_result"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@color/lightgray" />
+    </LinearLayout>
+   
+    <FrameLayout
+        android:id="@+id/container_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+<!-- 
+    <ListView
+        android:id="@+id/searching_list_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:divider="@drawable/divider"
+        android:dividerHeight="1dp"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="false"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/suggest_empty_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="无匹配项"
+        android:textSize="16sp" />
+         -->
+    
+</LinearLayout>

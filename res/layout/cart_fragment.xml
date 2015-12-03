@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/common_top_title"
+        layout="@layout/layout_top_title_text_button" />
+
+    <include
+        android:id="@+id/layout_not_login"
+        layout="@layout/layout_not_login" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/activity_bg" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#50cccccc"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tomato"
+                    android:padding="10dip"
+                    android:paddingBottom="10dip"
+                    android:text="订单税费低于50元，可免税费"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <com.handmark.pulltorefresh.library.PullToRefreshListView
+                    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cars_fragment_listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:fadingEdge="none"
+                    android:fastScrollEnabled="false"
+                    android:focusable="true"
+                    android:footerDividersEnabled="false"
+                    android:headerDividersEnabled="false"
+                    android:listSelector="@color/transparent"
+                    android:scrollbars="none"
+                    android:smoothScrollbar="true"
+                    ptr:ptrMode="both" />
+            </LinearLayout>
+
+            <!-- 结算 -->
+
+            <include layout="@layout/cart_operation_bar" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/cars_fragment_no_goods"
+            layout="@layout/cart_empty"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

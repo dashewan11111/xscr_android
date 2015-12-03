@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/image_big_size"
+    android:layout_height="@dimen/image_big_size"
+    android:layout_margin="10dp"
+    android:background="@drawable/order_list_item_image_bg" >
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/image_big_size_1"
+        android:layout_height="@dimen/image_big_size_1"
+        android:layout_gravity="center" />
+
+</FrameLayout>

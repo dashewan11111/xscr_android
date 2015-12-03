@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/item_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <View
+            android:id="@+id/grid_item_hor_divide_1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/item_white" />
+
+        <LinearLayout
+            android:id="@+id/grid_item_layout_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/bg_white"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/grid_item_product_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_default_114" />
+
+                <ImageView
+                    android:id="@+id/grid_item_promote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_list_deseno" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/grid_item_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/gray_2"
+                android:textSize="@dimen/default_size_small" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/grid_item_act_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="164"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/default_big_size_1" />
+
+                <TextView
+                    android:id="@+id/grid_item_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dip"
+                    android:text="￥234"
+                    android:textColor="@color/mid_grey_font_color"
+                    android:textSize="@dimen/default_size_small_1" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp" >
+
+                <ImageView
+                    android:id="@+id/grid_item_flag"
+                    android:layout_width="@dimen/category_item_national_flag_width"
+                    android:layout_height="@dimen/category_item_national_flag_height"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/img_default_114" />
+
+                <TextView
+                    android:id="@+id/grid_item_country_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/grid_item_flag"
+                    android:text="230"
+                    android:textColor="@color/mid_grey_font_color"
+                    android:textSize="@dimen/default_size_small_2" />
+
+                <TextView
+                    android:id="@+id/grid_item_sends_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:text="国内发货"
+                    android:textColor="@color/mid_grey_font_color"
+                    android:textSize="@dimen/default_size_small_2" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/grid_item_hor_divide_2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/item_white" />
+
+        <LinearLayout
+            android:id="@+id/grid_item_layout_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/bg_white"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/grid_item_product_image_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_default_114" />
+
+                <ImageView
+                    android:id="@+id/grid_item_promote_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_list_deseno" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/grid_item_product_name_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/gray_2"
+                android:textSize="@dimen/default_size_small" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/grid_item_act_price_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="164"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/default_big_size_1" />
+
+                <TextView
+                    android:id="@+id/grid_item_price_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dip"
+                    android:text="￥234"
+                    android:textColor="@color/mid_grey_font_color"
+                    android:textSize="@dimen/default_size_small_1" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp" >
+
+                <ImageView
+                    android:id="@+id/grid_item_flag_2"
+                    android:layout_width="@dimen/category_item_national_flag_width"
+                    android:layout_height="@dimen/category_item_national_flag_height"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/img_default_114" />
+
+                <TextView
+                    android:id="@+id/grid_item_country_name_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:layout_toRightOf="@id/grid_item_flag_2"
+                    android:text="230"
+                    android:textColor="@color/mid_grey_font_color"
+                    android:textSize="@dimen/default_size_small_2" />
+
+                <TextView
+                    android:id="@+id/grid_item_sends_add_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:text="国内发货"
+                    android:textColor="@color/mid_grey_font_color"
+                    android:textSize="@dimen/default_size_small_2" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/grid_item_hor_divide_3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/item_white" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/grid_item_ver_divide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/item_white" />
+
+</LinearLayout>

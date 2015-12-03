@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cart_operation_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/cart_operate_bar_height"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/cart_fragment_llyt_sum"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/cart_fragment_all_check"
+            style="@style/cart_item_select_tag"
+            android:src="@drawable/cart_product_select_on" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_all"
+            android:textColor="@color/gray_1"
+            android:textSize="@dimen/default_size_small_1" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="8dip"
+            android:layout_weight="1.0"
+            android:gravity="left"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="合计:"
+                    android:textColor="@color/red"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/cart_fragment_txt_all_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/default_big_size_1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dip"
+                    android:text="为您节省："
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/default_size_small_2" />
+
+                <TextView
+                    android:id="@+id/cart_fragment_txt_save_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="2dip"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/default_size_small_1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cart_fragment_btn_sum"
+            style="@style/cart_btn_style"
+            android:text="@string/cart_sale_btn" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cart_fragment_llyt_delete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/cart_fragment_delete_all_check"
+            style="@style/cart_item_select_tag"
+            android:layout_centerVertical="true"
+            android:src="@drawable/cart_product_select_off" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/cart_fragment_delete_all_check"
+            android:text="@string/select_all"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_size_small" />
+
+        <Button
+            android:id="@+id/cart_fragment_btn_delete"
+            style="@style/cart_btn_style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/delete" />
+    </RelativeLayout>
+
+</FrameLayout>

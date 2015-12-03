@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="0.5" />
+
+    <ImageView
+        android:layout_width="150dip"
+        android:layout_height="150dip"
+        android:src="@drawable/no_product" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dip"
+        android:text="没有检索到商品数据"
+        android:textColor="@color/gray"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/btn_get_product_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_round_conner_bg_gray_stroke"
+        android:padding="10dip"
+        android:text="重新获取"
+        android:textColor="@color/gray"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1.0" />
+
+</LinearLayout>

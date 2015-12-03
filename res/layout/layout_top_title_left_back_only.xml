@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/common_header_top_title_style"
+    android:background="@color/gray_bottom_bg" >
+
+    <TextView
+        android:id="@+layout_top_title/title"
+        style="@style/common_header_top_title_center_text_style" />
+
+    <ImageView style="@style/common_header_btn_back" />
+
+</RelativeLayout>
