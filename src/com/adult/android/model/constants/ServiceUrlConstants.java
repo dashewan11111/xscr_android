@@ -5,6 +5,7 @@ public class ServiceUrlConstants {
 	public static final String TEST_PHONE_NO = "13366287438";// 测试手机号
 	public static final String TEST_LOCATION = "01";// 北京
 	public static final String TEST_SIG = "";
+	public static final String CONTROLLER_HOST = "http://123.56.229.178:8080/xscr-api-web/";
 
 	public static enum HOST {
 		DEVELOP(0, "http://192.168.1.203/router", "http://192.168.1.58/"), TEST(
@@ -369,6 +370,8 @@ public class ServiceUrlConstants {
 
 		public static final String SORT_BY = "sortBy";
 
+		public static final String SORT_BY_VALUE = "sortVal";
+
 		public static final String KEY_WORD = "keyword";
 
 		public static final String ID = "id";
@@ -440,6 +443,8 @@ public class ServiceUrlConstants {
 
 		public static final String LOGIN = "user.login";
 
+		public static final String LOGIN2 = "appuser.logon";
+
 		public static final String REGIST = "user.register";
 
 		public static final String FINDBACK_PASSWORD = "user.findBackPassword";
@@ -453,6 +458,14 @@ public class ServiceUrlConstants {
 		public static final String GET_MY_COUPON_LIST = "user.getCouponList";
 
 		public static final String GET_MY_EVALUATION_LIST = "user.myEvaluationList";
+
+		public static final String GET_USER_INFO = "user.getUserInfo";
+
+		public static final String SAVE_USER_INFO = "user.saveUserInfo";
+
+		public static final String BIND_MOBILE = "user.bindMobile";
+
+		public static final String UPDATE_PASSWORD = "user.updatePassword";
 
 		public static final String USER_ID = "userId";
 
@@ -477,6 +490,10 @@ public class ServiceUrlConstants {
 		public static final String NICK_NAME = "nickname";
 
 		public static final String STATUS = "status";
+
+		public static final String MARRAGE_STATUS = "marriageStatus";
+
+		public static final String SEX_ORIENTATION = "sexualOrientation";
 
 	}
 
@@ -505,6 +522,8 @@ public class ServiceUrlConstants {
 
 		public static final String CONTENT = "content";
 
+		public static final String ANONYMOUS = "anonymous";
+
 		public static final String AMOUNT = "amount";
 
 		public static final String PAGE_COUNT = "pageCount";
@@ -524,12 +543,14 @@ public class ServiceUrlConstants {
 		public static final String DELETE_ORDER = "order.deleteOrder";
 
 		public static final String GET_EVALUATION_LIST = "order.getEvaluationList";
-		
-		public static final String GET_MY_EVALUATION_LIST = "user.myEvaluationList"; 
+
+		public static final String GET_MY_EVALUATION_LIST = "user.myEvaluationList";
 
 		public static final String POST_EVALUATION = "order.evaluation";
 
 		public static final String GET_LOGISTICS_PRICE = "cart.getLogisticsPrice";
+
+		public static final String EVALUATION_PRICE = "evaluationPrice";
 
 		public static final String EVALUATION_CONTENT = "evaluationContent";
 

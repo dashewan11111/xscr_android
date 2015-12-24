@@ -27,6 +27,7 @@ import com.adult.android.entity.Promotion;
 import com.adult.android.entity.ServiceDto;
 import com.adult.android.entity.Sku2;
 import com.adult.android.model.CategoryModel;
+import com.adult.android.model.constants.ServiceUrlConstants;
 import com.adult.android.model.internet.exception.HttpResponseException;
 import com.adult.android.model.internet.exception.ResponseException;
 import com.adult.android.presenter.fragment.main.tab.adapter.ProductDetailPicAdapter2;
@@ -39,8 +40,10 @@ import com.adult.android.view.ProductSkuListPopupWindow;
 import com.adult.android.view.ProductSkuListPopupWindow.SkuListPopupWindowListener;
 import com.lidroid.xutils.BitmapUtils;
 
-public class ProductDetailsActivity2 extends WebViewActivity implements OnPageChangeListener, OnClickListener,
-		SkuListPopupWindowListener {
+public class ProductDetailsActivity2 extends WebViewActivity implements
+		OnPageChangeListener, OnClickListener, SkuListPopupWindowListener {
+
+	public static final String EXTRA_PRODUCT_ID = "extra_product_id";
 
 	private ProductDetailsDto product;
 
@@ -50,9 +53,11 @@ public class ProductDetailsActivity2 extends WebViewActivity implements OnPageCh
 
 	private MyScrollView mScrollView;
 
-	private TextView txtName, txtDesc, txtPrice, txtPriceMarket, txtSalesAmount, txtBuyNow, txtAddCart;
+	private TextView txtName, txtDesc, txtPrice, txtPriceMarket,
+			txtSalesAmount, txtBuyNow, txtAddCart;
 
-	private LinearLayout llytPagerPoiner, llytServiceList, llytPromotionList, llytCustomer, llytFavourite;
+	private LinearLayout llytPagerPoiner, llytServiceList, llytPromotionList,
+			llytCustomer, llytFavourite;
 
 	private LoadingDialog LoadingDialog;
 
@@ -99,22 +104,29 @@ public class ProductDetailsActivity2 extends WebViewActivity implements OnPageCh
 	private void initActivityTitle() {
 		mScrollView = (MyScrollView) findViewById(R.id.product_details2_scrollview);
 		final LinearLayout llytHeader = (LinearLayout) findViewById(R.id.layout_trans_header);
-		llytHeader.findViewById(R.id.layout_trans_btn_back).setOnClickListener(this);
-		llytHeader.findViewById(R.id.layout_trans_btn_cart).setOnClickListener(this);
-		final TextView txtTitle = (TextView) llytHeader.findViewById(R.id.layout_trans_title);
+		llytHeader.findViewById(R.id.layout_trans_btn_back).setOnClickListener(
+				this);
+		llytHeader.findViewById(R.id.layout_trans_btn_cart).setOnClickListener(
+				this);
+		final TextView txtTitle = (TextView) llytHeader
+				.findViewById(R.id.layout_trans_title);
 		txtTitle.setText("商品详情");
-		mScrollView.setOnScrollViewChangeListner(new MyScrollView.OnScrollViewChangeListner() {
-			@Override
-			public void onScrollChanged(int l, int t, int oldl, int oldt) {
+		mScrollView
+				.setOnScrollViewChangeListner(new MyScrollView.OnScrollViewChangeListner() {
+					@Override
+					public void onScrollChanged(int l, int t, int oldl, int oldt) {
 
-				int alpha = t * 255 / (Misc.getScreenDisplay(ProductDetailsActivity2.this)[1] / 2);
-				if (0 > alpha || 255 < alpha) {
-					return;
-				}
-				txtTitle.setTextColor(Color.argb(alpha, 96, 96, 96));
-				llytHeader.setBackgroundColor(Color.argb(alpha, 255, 255, 255));
-			}
-		});
+						int alpha = t
+								* 255
+								/ (Misc.getScreenDisplay(ProductDetailsActivity2.this)[1] / 2);
+						if (0 > alpha || 255 < alpha) {
+							return;
+						}
+						txtTitle.setTextColor(Color.argb(alpha, 96, 96, 96));
+						llytHeader.setBackgroundColor(Color.argb(alpha, 255,
+								255, 255));
+					}
+				});
 	}
 
 	/** 填充数据 */
@@ -129,12 +141,14 @@ public class ProductDetailsActivity2 extends WebViewActivity implements OnPageCh
 		initServiceList();// 服务列表
 		initPromotionList();// 促销列表
 		initCommentList();// 评论列表
-		mWebView.loadUrl("http://www.baidu.com");
+		mWebView.loadUrl(ServiceUrlConstants.getImageHost()
+				+ product.getDetailUrl());
 		ViewTreeObserver vto2 = txtPriceMarket.getViewTreeObserver();
 		vto2.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
 			@Override
 			public void onGlobalLayout() {
-				txtPriceMarket.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+				txtPriceMarket.getViewTreeObserver()
+						.removeGlobalOnLayoutListener(this);
 				View view = findViewById(R.id.product_details_price_market_line);
 				view.setVisibility(View.VISIBLE);
 				ViewGroup.LayoutParams params = view.getLayoutParams();
@@ -146,16 +160,19 @@ public class ProductDetailsActivity2 extends WebViewActivity implements OnPageCh
 
 	/** 图片循环 */
 	private void initViewPager() {
-		ViewGroup.LayoutParams mViewPagerlayoutParams = mViewPager.getLayoutParams();
+		ViewGroup.LayoutParams mViewPagerlayoutParams = mViewPager
+				.getLayoutParams();
 		if (mViewPagerlayoutParams != null) {
 			mViewPagerlayoutParams.width = Misc.getScreenDisplay(this)[0];
 			mViewPagerlayoutParams.height = (int) (mViewPagerlayoutParams.width);
 			mViewPager.setLayoutParams(mViewPagerlayoutParams);
 		}
-		mViewPager.setAdapter(new ProductDetailPicAdapter2(this, product.getImgList()));
+		mViewPager.setAdapter(new ProductDetailPicAdapter2(this, product
+				.getImgList()));
 		mViewPager.setOnPageChangeListener(this);
 		// 设置布局参数
-		LinearLayout.LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		LinearLayout.LayoutParams params = new LayoutParams(
+				LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		int marginParam = Misc.dip2px(this, 10) / 2;
 		llytPagerPoiner.removeAllViewsInLayout();
 		for (int i = 0; i < product.getImgList().size(); i++) {
@@ -168,18 +185,24 @@ public class ProductDetailsActivity2 extends WebViewActivity implements OnPageCh
 			params.weight = 1;
 			llytPagerPoiner.addView(item, params);
 		}
-		llytPagerPoiner.getChildAt(0).setBackgroundResource(R.drawable.recommend_gallery_select);
+		llytPagerPoiner.getChildAt(0).setBackgroundResource(
+				R.drawable.recommend_gallery_select);
 	}
 
 	/** 服务列表 */
 	private void initServiceList() {
+		if (null != llytServiceList && 0 < llytServiceList.getChildCount()) {
+			llytServiceList.removeAllViewsInLayout();
+		}
 		List<ServiceDto> serviceList = product.getServiceList();
 		if (null == serviceList) {
 			return;
 		}
 		for (ServiceDto service : serviceList) {
-			View view = getLayoutInflater().inflate(R.layout.item_product_service_list, null);
-			((TextView) view.findViewById(R.id.item_product_service_list_name)).setText(service.getContent());
+			View view = getLayoutInflater().inflate(
+					R.layout.item_product_service_list, null);
+			((TextView) view.findViewById(R.id.item_product_service_list_name))
+					.setText(service.getContent());
 			llytServiceList.addView(view);
 		}
 	}
@@ -194,18 +217,23 @@ public class ProductDetailsActivity2 extends WebViewActivity implements OnPageCh
 			if (null == promotion) {
 				continue;
 			}
-			View view = getLayoutInflater().inflate(R.layout.item_product_promotion_list, null);
-			ImageView type = (ImageView) view.findViewById(R.id.item_product_promotin_list_type);
+			View view = getLayoutInflater().inflate(
+					R.layout.item_product_promotion_list, null);
+			TextView type = (TextView) view
+					.findViewById(R.id.item_product_promotin_list_type);
 			if ("0".equals(promotion.getType())) {
-				type.setBackgroundColor(getResources().getColor(R.color.red));
+				type.setText("满减");
+				type.setBackgroundResource(R.drawable.promotion_type_full_cut);
 			}
 			if ("1".equals(promotion.getType())) {
-				type.setBackgroundColor(getResources().getColor(R.color.green));
+				type.setText("满包邮");
+				type.setBackgroundResource(R.drawable.promotion_type_full_baoyou);
 			}
 			if ("2".equals(promotion.getType())) {
-				type.setBackgroundColor(getResources().getColor(R.color.blue));
+				type.setBackgroundResource(R.drawable.promotion_type_full_cut);
 			}
-			TextView desc = (TextView) view.findViewById(R.id.item_product_promotin_list_desc);
+			TextView desc = (TextView) view
+					.findViewById(R.id.item_product_promotin_list_desc);
 			desc.setText(promotion.getDesc());
 			llytPromotionList.addView(view);
 		}
@@ -220,8 +248,10 @@ public class ProductDetailsActivity2 extends WebViewActivity implements OnPageCh
 		txtCommenterNum.setText("用户评价(" + product.getCommentCount() + "人)");
 		txtCommenterPoint.setText("综合评分:" + product.getCommentPoint());
 		ratingBar.setRating(product.getCommentPoint());
-		if (null == product.getCommentList() || 2 >= product.getCommentList().size()) {
-			findViewById(R.id.layout_product_comment_more).setVisibility(View.GONE);
+		if (null == product.getCommentList()
+				|| 2 >= product.getCommentList().size()) {
+			findViewById(R.id.layout_product_comment_more).setVisibility(
+					View.GONE);
 			return;
 		}
 		if (null != product.getCommentList()) {
@@ -231,17 +261,23 @@ public class ProductDetailsActivity2 extends WebViewActivity implements OnPageCh
 					return;
 				}
 				llytContainer.addView(creatCommentView(comment));
-				llytContainer.addView(getLayoutInflater().inflate(R.layout.line_gray_full, null));
+				llytContainer.addView(getLayoutInflater().inflate(
+						R.layout.line_gray_full, null));
 			}
 		}
 	}
 
 	private View creatCommentView(Comment2 comment) {
-		View item = getLayoutInflater().inflate(R.layout.item_comment_list, null);
-		RatingBar itemRatingBar = (RatingBar) item.findViewById(R.id.item_comment_point);
-		TextView txtCommenter = (TextView) item.findViewById(R.id.item_commenter);
-		TextView txtCommentTime = (TextView) item.findViewById(R.id.item_comment_time);
-		TextView txtCommentContent = (TextView) item.findViewById(R.id.item_comment_content);
+		View item = getLayoutInflater().inflate(R.layout.item_comment_list,
+				null);
+		RatingBar itemRatingBar = (RatingBar) item
+				.findViewById(R.id.item_comment_point);
+		TextView txtCommenter = (TextView) item
+				.findViewById(R.id.item_commenter);
+		TextView txtCommentTime = (TextView) item
+				.findViewById(R.id.item_comment_time);
+		TextView txtCommentContent = (TextView) item
+				.findViewById(R.id.item_comment_content);
 		itemRatingBar.setRating(comment.getPoint());
 		if (comment.isAnonymous() || null == comment.getCreatorName()) {
 			txtCommenter.setText("匿名");
@@ -255,7 +291,8 @@ public class ProductDetailsActivity2 extends WebViewActivity implements OnPageCh
 
 	/** 获取数据 */
 	protected void getDateList(int flag) {
-		CategoryModel.getInstance().getProductDetail(getIntent().getStringExtra("pid"),
+		CategoryModel.getInstance().getProductDetail(
+				getIntent().getStringExtra(EXTRA_PRODUCT_ID),
 				new CategoryModel.OnGetProducDetailCompletedListener() {
 
 					@Override
@@ -282,14 +319,16 @@ public class ProductDetailsActivity2 extends WebViewActivity implements OnPageCh
 
 					@Override
 					public void onFailed(ResponseException e) {
-						ToastUtil.showToastShort(ProductDetailsActivity2.this, e.getResultMsg());
+						ToastUtil.showToastShort(ProductDetailsActivity2.this,
+								e.getResultMsg());
 						Misc.finishDelay(ProductDetailsActivity2.this);
 					}
 				});
 	}
 
 	private void showSkuPopupWindow(int action) {
-		skuPopupWindow = new ProductSkuListPopupWindow(this, action, pop_layout, product.getSkuList());
+		skuPopupWindow = new ProductSkuListPopupWindow(this, action,
+				pop_layout, product.getSkuList());
 		skuPopupWindow.show(findViewById(R.id.pop_base_view));
 	}
 
@@ -336,9 +375,11 @@ public class ProductDetailsActivity2 extends WebViewActivity implements OnPageCh
 			break;
 		case R.id.layout_product_comment_more:
 			Intent intent4 = new Intent(this, CommentListActivity.class);
-			intent4.putExtra("commentList", (Serializable) product.getCommentList());
+			intent4.putExtra("commentList",
+					(Serializable) product.getCommentList());
 			intent4.putExtra("point", product.getCommentPoint());
-			intent4.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+			intent4.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+					| Intent.FLAG_ACTIVITY_SINGLE_TOP);
 			startActivity(intent4);
 			break;
 		default:

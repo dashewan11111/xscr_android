@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.adult.android"
-    android:versionCode="1"
-    android:versionName="0.5.1_1512" >
+    android:versionCode="110"
+    android:versionName="1.1.0" >
 
     <uses-sdk
         android:minSdkVersion="9"
@@ -197,6 +197,42 @@
         </activity>
         <activity
             android:name=".presenter.activity.EvaluationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".presenter.activity.SexLoveActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".presenter.activity.EditNickName"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".presenter.activity.MarrageStatus"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".presenter.activity.AccountSafeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".presenter.activity.EvaluationListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".presenter.activity.BindMobileActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".presenter.activity.LoginActivityForBox"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".presenter.activity.AsistantActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".presenter.activity.EditAgeActivity"
             android:screenOrientation="portrait" >
         </activity>
     </application>

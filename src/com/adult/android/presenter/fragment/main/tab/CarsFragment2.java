@@ -24,15 +24,15 @@ import android.widget.TextView;
 import com.adult.android.R;
 import com.adult.android.entity.AddToCartResponse;
 import com.adult.android.entity.CalculateCartResponse;
+import com.adult.android.entity.CartProductListResponse;
+import com.adult.android.entity.CartProductListResponse2;
+import com.adult.android.entity.GetCartAmountResponse;
 import com.adult.android.entity.ProductForCart;
 import com.adult.android.entity.ProductRule;
 import com.adult.android.entity.SkuForCart;
 import com.adult.android.model.CartModel;
 import com.adult.android.model.CartModel.OnCalculateCartCompletedListener;
 import com.adult.android.model.CartModel.OnGetCartAmountCompletedListener;
-import com.adult.android.model.CartProductListResponse;
-import com.adult.android.model.CartProductListResponse2;
-import com.adult.android.model.GetCartAmountResponse;
 import com.adult.android.model.internet.exception.HttpResponseException;
 import com.adult.android.model.internet.exception.ResponseException;
 import com.adult.android.presenter.AgentApplication;
@@ -136,8 +136,10 @@ public class CarsFragment2 extends BaseTabFragment implements
 							int position, long id) {
 						if (0 < productList.get((int) id).getSkuList().size()) {
 							Intent intent = new Intent();
-							intent.putExtra("pid", productList.get((int) id)
-									.getSkuList().get(0));
+							intent.putExtra(
+									ProductDetailsActivity2.EXTRA_PRODUCT_ID,
+									productList.get((int) id).getSkuList()
+											.get(0));
 							intent.setClass(getActivity(),
 									ProductDetailsActivity2.class);
 							startActivity(intent);
@@ -151,6 +153,8 @@ public class CarsFragment2 extends BaseTabFragment implements
 		if (MainActivity.class == getActivity().getClass()) {
 			((MainActivity) getActivity()).setActivityTitle("购物车");
 			((MainActivity) getActivity()).setShowMiddleView();
+			((MainActivity) getActivity()).setShowLeftButton(false);
+			((MainActivity) getActivity()).setShowRightButton(false);
 		}
 	}
 
@@ -278,8 +282,16 @@ public class CarsFragment2 extends BaseTabFragment implements
 			sumCars();
 			break;
 		case R.id.btn_go_buy:
-			((MainActivity) getActivity()).getTabSwitcherFragment()
-					.updateTab(1);
+			if (getActivity().getClass() == MainActivity.class) {
+				((MainActivity) getActivity()).getTabSwitcherFragment()
+						.updateTab(1);
+			} else {
+				Intent intent = new Intent(getActivity(), MainActivity.class);
+				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+						| Intent.FLAG_ACTIVITY_SINGLE_TOP);
+				intent.putExtra(MainActivity.SWITCH_INDEX, 1);
+				startActivity(intent);
+			}
 			break;
 		default:
 			break;

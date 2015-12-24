@@ -3,16 +3,22 @@ package com.adult.android.model;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.adult.android.entity.CouponResponse;
+import com.adult.android.entity.EvaluationResponse;
+import com.adult.android.entity.MyTopicResponse;
+import com.adult.android.entity.PayInfoResponse;
+import com.adult.android.entity.UserResponse;
+import com.adult.android.entity.VerifyResponse;
 import com.adult.android.model.constants.ServiceUrlConstants;
 import com.adult.android.model.constants.ServiceUrlConstants.OrderParams2;
 import com.adult.android.model.constants.ServiceUrlConstants.UserParams2;
 import com.adult.android.model.internet.InternetClient;
 import com.adult.android.model.internet.bean.InputBean;
-import com.adult.android.model.internet.bean.StatusInfo;
 import com.adult.android.model.internet.exception.BusinessException;
 import com.adult.android.model.internet.exception.HttpResponseException;
 import com.adult.android.model.internet.exception.ResponseException;
 import com.adult.android.model.internet.listener.HttpResponseListener;
+import com.adult.android.presenter.AgentApplication;
 import com.adult.android.utils.CopUtils;
 
 /**
@@ -204,7 +210,7 @@ public class UserModel {
 
 	}
 
-	/** 结算 */
+	/** 获取验证码 */
 	public void getVerifyCode(String mobile,
 			final OnGetVerifyCodeCompletedListener listener) {
 		// 共通参数
@@ -257,7 +263,7 @@ public class UserModel {
 				});
 	}
 
-	/** 计算金额 */
+	/***/
 	public void getPayInfo(String orderId, String payType,
 			final OnGetPayInfoCompletedListener listener) {
 		// 共通参数
@@ -456,8 +462,8 @@ public class UserModel {
 
 		String url = CopUtils.buildGetUrl(maps,
 				ServiceUrlConstants.getApiHost());
-		InternetClient.get(url, null, CommentResponse.class,
-				new HttpResponseListener<CommentResponse>() {
+		InternetClient.get(url, null, EvaluationResponse.class,
+				new HttpResponseListener<EvaluationResponse>() {
 
 					@Override
 					public void onStart() {
@@ -465,7 +471,7 @@ public class UserModel {
 					}
 
 					@Override
-					public void onSuccess(CommentResponse response) {
+					public void onSuccess(EvaluationResponse response) {
 						listener.onSuccess(response);
 					}
 
@@ -494,27 +500,22 @@ public class UserModel {
 				});
 	}
 
-	public void postComment(String userId, String title, String content,
-			String orderId, final OnPostCommentCompletedListener listener) {
+	/** 获取用户信息 */
+	public void getUserInfo(final OnLoginCompletedListener listener) {
 		// 共通参数
-		InputBean inputBean = new InputBean();
-
-		inputBean.putQueryParam(ServiceUrlConstants.APP_KEY,
-				ServiceUrlConstants.APP_KEY_VALUE);
-		inputBean.putQueryParam(ServiceUrlConstants.VERSION,
-				ServiceUrlConstants.VERSION_VALUE);
-		inputBean.putQueryParam(ServiceUrlConstants.APP_SECRET_NAME,
+		Map<String, String> maps = new HashMap<String, String>();
+		maps.put(ServiceUrlConstants.APP_KEY, ServiceUrlConstants.APP_KEY_VALUE);
+		maps.put(ServiceUrlConstants.APP_SECRET_NAME,
 				ServiceUrlConstants.APP_SECRET_VALUE);
-		inputBean.putQueryParam(ServiceUrlConstants.MOTHOD,
-				OrderParams2.POST_EVALUATION);
+		maps.put(ServiceUrlConstants.VERSION, ServiceUrlConstants.VERSION_VALUE);
+		maps.put(ServiceUrlConstants.MOTHOD, UserParams2.GET_USER_INFO);
 		// 业务参数:
-		inputBean.putQueryParam(UserParams2.USER_ID, userId);
-		inputBean.putQueryParam(UserParams2.ORDER_ID, orderId);
-		inputBean.putQueryParam(UserParams2.SKU_ID, orderId);
+		maps.put(UserParams2.USER_ID, AgentApplication.get().getUserId());
 
-		InternetClient.post(ServiceUrlConstants.getApiHost(), inputBean,
-				CommentResponse.class,
-				new HttpResponseListener<CommentResponse>() {
+		String url = CopUtils.buildGetUrl(maps,
+				ServiceUrlConstants.getApiHost());
+		InternetClient.get(url, null, UserResponse.class,
+				new HttpResponseListener<UserResponse>() {
 
 					@Override
 					public void onStart() {
@@ -522,7 +523,130 @@ public class UserModel {
 					}
 
 					@Override
-					public void onSuccess(CommentResponse response) {
+					public void onSuccess(UserResponse response) {
+						listener.onSuccess(response);
+					}
+
+					@Override
+					public void onHttpException(HttpResponseException e) {
+						listener.onHttpException(e);
+					}
+
+					@Override
+					public void onBusinessException(BusinessException e) {
+						listener.onFailed(e);
+					}
+
+					@Override
+					public void onOtherException(Throwable throwable) {
+						ResponseException exception = new ResponseException(
+								throwable);
+						exception.setResultMsg("请求失败");
+						listener.onFailed(exception);
+					}
+
+					@Override
+					public void onFinish() {
+
+					}
+				});
+	}
+
+	/** 更新用户信息 */
+	public void updateUserInfo(String nick, String age, String sex,
+			String love, String marrage, String location,
+			final OnLoginCompletedListener listener) {
+		// 共通参数
+		InputBean input = new InputBean();
+		input.putQueryParam(ServiceUrlConstants.APP_KEY,
+				ServiceUrlConstants.APP_KEY_VALUE);
+		input.putQueryParam(ServiceUrlConstants.APP_SECRET_NAME,
+				ServiceUrlConstants.APP_SECRET_VALUE);
+		input.putQueryParam(ServiceUrlConstants.VERSION,
+				ServiceUrlConstants.VERSION_VALUE);
+		input.putQueryParam(ServiceUrlConstants.MOTHOD,
+				UserParams2.SAVE_USER_INFO);
+		// 业务参数:
+		input.putQueryParam(UserParams2.USER_ID, AgentApplication.get()
+				.getUserId());
+		input.putQueryParam(UserParams2.NICK_NAME, nick);
+		input.putQueryParam(UserParams2.GEMDER, sex);
+		input.putQueryParam(UserParams2.SEX_ORIENTATION, love);
+		input.putQueryParam(UserParams2.MARRAGE_STATUS, marrage);
+		// maps.put(UserParams2.USER_ID, AgentApplication.get().getUserId());
+		// maps.put(UserParams2.USER_ID, AgentApplication.get().getUserId());
+		// maps.put(UserParams2.USER_ID, AgentApplication.get().getUserId());
+
+		InternetClient.post(ServiceUrlConstants.getApiHost(), input,
+				UserResponse.class, new HttpResponseListener<UserResponse>() {
+
+					@Override
+					public void onStart() {
+						listener.onStart();
+					}
+
+					@Override
+					public void onSuccess(UserResponse response) {
+						listener.onSuccess(response);
+					}
+
+					@Override
+					public void onHttpException(HttpResponseException e) {
+						listener.onHttpException(e);
+					}
+
+					@Override
+					public void onBusinessException(BusinessException e) {
+						listener.onFailed(e);
+					}
+
+					@Override
+					public void onOtherException(Throwable throwable) {
+						ResponseException exception = new ResponseException(
+								throwable);
+						exception.setResultMsg("请求失败");
+						listener.onFailed(exception);
+					}
+
+					@Override
+					public void onFinish() {
+
+					}
+				});
+	}
+
+	/** 绑定手机 */
+	public void bindMobile(String mobile, String code,
+			final OnLoginCompletedListener listener) {
+		// 共通参数
+		InputBean input = new InputBean();
+		input.putQueryParam(ServiceUrlConstants.APP_KEY,
+				ServiceUrlConstants.APP_KEY_VALUE);
+		input.putQueryParam(ServiceUrlConstants.APP_SECRET_NAME,
+				ServiceUrlConstants.APP_SECRET_VALUE);
+		input.putQueryParam(ServiceUrlConstants.VERSION,
+				ServiceUrlConstants.VERSION_VALUE);
+		input.putQueryParam(ServiceUrlConstants.MOTHOD, UserParams2.BIND_MOBILE);
+		// 业务参数:
+		input.putQueryParam(UserParams2.USER_ID, AgentApplication.get()
+				.getUserId());
+		input.putQueryParam(UserParams2.MOBILE, mobile);
+		input.putQueryParam(UserParams2.VERIFY_CODE, code);
+
+		// maps.put(UserParams2.USER_ID, AgentApplication.get().getUserId());
+		// maps.put(UserParams2.USER_ID, AgentApplication.get().getUserId());
+		// maps.put(UserParams2.USER_ID, AgentApplication.get().getUserId());
+
+		InternetClient.post(ServiceUrlConstants.getApiHost(), input,
+				UserResponse.class, new HttpResponseListener<UserResponse>() {
+
+					@Override
+					public void onStart() {
+						listener.onStart();
+					}
+
+					@Override
+					public void onSuccess(UserResponse response) {
 						listener.onSuccess(response);
 					}
 
@@ -624,21 +748,7 @@ public class UserModel {
 	/** 结算数据回调 */
 	public static interface OnGetCommentListCompletedListener {
 
-		void onSuccess(CommentResponse info);
-
-		void onFailed(ResponseException e);
-
-		void onHttpException(HttpResponseException e);
-
-		void onStart();
-
-		void onFinish();
-	}
-
-	/** 评论 */
-	public static interface OnPostCommentCompletedListener {
-
-		void onSuccess(StatusInfo info);
+		void onSuccess(EvaluationResponse info);
 
 		void onFailed(ResponseException e);
 

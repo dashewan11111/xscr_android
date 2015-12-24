@@ -8,6 +8,7 @@ import java.util.Map;
 
 import org.apache.commons.httpclient.methods.multipart.Part;
 import org.apache.commons.httpclient.methods.multipart.StringPart;
+import org.apache.http.protocol.HTTP;
 
 import com.adult.android.entity.CommunityResponse;
 import com.adult.android.entity.TopicDetailResponse;
@@ -335,12 +336,13 @@ public class CommunityModel {
 
 		params.add(new StringPart(CommunityParams.USER_ID, userId));
 		params.add(new StringPart(CommunityParams.COMMUNITY_ID, communityId));
-		params.add(new StringPart(CommunityParams.TITLE, title));
-		params.add(new StringPart(CommunityParams.CONTENT, content));
+		params.add(new StringPart(CommunityParams.TITLE, title, HTTP.UTF_8));
+		params.add(new StringPart(CommunityParams.CONTENT, content, HTTP.UTF_8));
+		params.add(new StringPart(CommunityParams.ANONYMOUS, "1"));
 
 		try {
 			DataService.sendDataByHttpClientPost(
-					"http://123.56.229.178:8080/xscr-api-web/topic/postTopic",
+					ServiceUrlConstants.CONTROLLER_HOST + "topic/postTopic",
 					fileList, params, new OnSuccessListner() {
 
 						@Override
@@ -357,58 +359,6 @@ public class CommunityModel {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		// InputBean inputBean = new InputBean();
-		// // 共通参数
-		// inputBean.putQueryParam(ServiceUrlConstants.APP_KEY,
-		// ServiceUrlConstants.APP_KEY_VALUE);
-		// inputBean.putQueryParam(ServiceUrlConstants.VERSION,
-		// ServiceUrlConstants.VERSION_VALUE);
-		// inputBean.putQueryParam(ServiceUrlConstants.APP_SECRET_NAME,
-		// ServiceUrlConstants.APP_SECRET_VALUE);
-		// inputBean.putQueryParam(ServiceUrlConstants.MOTHOD,
-		// CommunityParams.POST_REPLY);
-		// // 业务参数
-		// inputBean.putQueryParam(CommunityParams.USER_ID, userId);
-		// inputBean.putQueryParam(CommunityParams.COMMUNITY_ID, communityId);
-		// inputBean.putQueryParam(CommunityParams.TITLE, communityId);
-		// inputBean.putQueryParam(CommunityParams.CONTENT, content);
-		// InternetClient.post(ServiceUrlConstants.getApiHost(), inputBean,
-		// StatusInfo.class, new HttpResponseListener<StatusInfo>() {
-		//
-		// @Override
-		// public void onStart() {
-		// listener.onStart();
-		// }
-		//
-		// @Override
-		// public void onSuccess(StatusInfo response) {
-		// listener.onSuccess();
-		// }
-		//
-		// @Override
-		// public void onHttpException(HttpResponseException e) {
-		// listener.onHttpException(e);
-		// }
-		//
-		// @Override
-		// public void onBusinessException(BusinessException e) {
-		// listener.onFailed(e);
-		// }
-		//
-		// @Override
-		// public void onOtherException(Throwable throwable) {
-		// ResponseException exception = new ResponseException(
-		// throwable);
-		// exception.setResultMsg("请求失败");
-		// listener.onFailed(exception);
-		// }
-		//
-		// @Override
-		// public void onFinish() {
-		//
-		// }
-		// });
 	}
 
 	public void rewordTopic(String userId, String topicId, String amount,
@@ -422,7 +372,7 @@ public class CommunityModel {
 		inputBean.putQueryParam(ServiceUrlConstants.APP_SECRET_NAME,
 				ServiceUrlConstants.APP_SECRET_VALUE);
 		inputBean.putQueryParam(ServiceUrlConstants.MOTHOD,
-				CommunityParams.POST_REPLY);
+				CommunityParams.REWORD_TOPIC);
 		// 业务参数
 		inputBean.putQueryParam(CommunityParams.USER_ID, userId);
 		inputBean.putQueryParam(CommunityParams.TOPIC_ID, topicId);

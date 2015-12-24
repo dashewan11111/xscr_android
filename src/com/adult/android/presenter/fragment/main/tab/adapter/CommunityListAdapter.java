@@ -7,13 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.adult.android.R;
 import com.adult.android.entity.CommunityDTO;
 import com.adult.android.model.constants.ServiceUrlConstants;
+import com.adult.android.view.CircleImageView;
 import com.lidroid.xutils.BitmapUtils;
+
 public class CommunityListAdapter extends BaseAdapter {
 
 	private Context context;
@@ -52,7 +53,7 @@ public class CommunityListAdapter extends BaseAdapter {
 			holder = new ViewHolder();
 			convertView = LayoutInflater.from(context).inflate(
 					R.layout.item_community_list, null);
-			holder.img = (ImageView) convertView
+			holder.img = (CircleImageView) convertView
 					.findViewById(R.id.item_community_list_image);
 			holder.txtTitle = (TextView) convertView
 					.findViewById(R.id.item_community_list_title);
@@ -73,7 +74,7 @@ public class CommunityListAdapter extends BaseAdapter {
 
 	private class ViewHolder {
 
-		private ImageView img;
+		private CircleImageView img;
 
 		private TextView txtTitle;
 

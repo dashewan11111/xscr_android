@@ -4,13 +4,21 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/activity_bg"
+        android:padding="10dip"
+        android:textSize="15sp"
+        android:text="圈子推荐" />
+
     <com.handmark.pulltorefresh.library.PullToRefreshListView
         xmlns:ptr="http://schemas.android.com/apk/res-auto"
         android:id="@+id/community_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@color/gray_bg1"
-        android:dividerHeight="10dp"
+        android:divider="@color/gray_bottom_bg"
+        android:dividerHeight="0.7dip"
         android:fadingEdge="none"
         android:fastScrollEnabled="false"
         android:focusable="true"

@@ -9,12 +9,11 @@ import org.apache.commons.httpclient.methods.multipart.FilePart;
 import org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity;
 import org.apache.commons.httpclient.methods.multipart.Part;
 import org.apache.commons.httpclient.methods.multipart.StringPart;
+import org.apache.commons.httpclient.params.HttpMethodParams;
 
 import android.util.Log;
 
 import com.adult.android.model.CommunityModel.OnSuccessListner;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 
 public class DataService {
 	/**
@@ -35,14 +34,15 @@ public class DataService {
 			throws Exception {
 
 		for (int i = 0; i < files.size(); i++) {
-			mparameters.add(new FilePart("file" + i, files.get(i)));
+			mparameters.add(new FilePart("file", files.get(i)));
 		}
 		Part[] parts = mparameters.toArray(new Part[0]);
-
 		PostMethod filePost = new PostMethod(path);
 		filePost.setRequestEntity(new MultipartRequestEntity(parts, filePost
 				.getParams()));
 		HttpClient client = new HttpClient();
+		client.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET,
+				"UTF-8");
 		client.getHttpConnectionManager().getParams()
 				.setConnectionTimeout(5000);
 
@@ -50,9 +50,6 @@ public class DataService {
 		if (status == 200) {
 			Log.e("DataService", "" + filePost.getResponseCharSet());
 			String result = new String(filePost.getResponseBodyAsString());
-			Log.e("DataService", "--" + result);
-			// JSONArray array = (JSONArray) JSON.parse(result);
-			Log.e("JSONArray", "--" + result);
 			listner.onSuccess(result);
 			return result;
 		} else {

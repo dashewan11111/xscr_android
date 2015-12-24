@@ -9,7 +9,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 
 import com.adult.android.R;
+import com.adult.android.presenter.AgentApplication;
 import com.adult.android.presenter.fragment.TopicListFragment;
+import com.adult.android.utils.GeneralTool;
+import com.adult.android.utils.ToastUtil;
 
 public class TopicListActivity extends BaseActivity implements OnClickListener {
 
@@ -39,6 +42,10 @@ public class TopicListActivity extends BaseActivity implements OnClickListener {
 
 			@Override
 			public void onClick(View view) {
+				if (GeneralTool.isEmpty(AgentApplication.get().getUserId())) {
+					ToastUtil.showToastShort(TopicListActivity.this, "请先登录");
+					return;
+				}
 				Intent intent = new Intent(TopicListActivity.this,
 						PostTopicActivity.class);
 				intent.putExtra("communityId",

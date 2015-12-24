@@ -10,6 +10,7 @@
         style="@style/layout.Xy"
         android:background="@color/white"
         android:gravity="center_vertical"
+        android:visibility="gone"
         android:orientation="horizontal" >
 
         <TextView
@@ -56,7 +57,7 @@
             android:paddingLeft="25dip"
             android:paddingRight="0dip"
             android:paddingTop="13dip"
-            android:src="@drawable/cart_product_select_off" />
+            android:src="@drawable/cart_product_select_on" />
     </LinearLayout>
 
     <include layout="@layout/line_gray_full" />

@@ -11,8 +11,8 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.adult.android.R;
+import com.adult.android.entity.MyTopicResponse;
 import com.adult.android.entity.TopicDTO;
-import com.adult.android.model.MyTopicResponse;
 import com.adult.android.model.UserModel;
 import com.adult.android.model.internet.exception.HttpResponseException;
 import com.adult.android.model.internet.exception.ResponseException;
@@ -92,6 +92,12 @@ public class MyTopicListActivity extends BaseActivity {
 						if (0 == flag) {
 							topicList = new ArrayList<TopicDTO>();
 						}
+						if (null == info.getData()
+								|| 0 == info.getData().size()) {
+							listView.onRefreshComplete();
+							return;
+						}
+						pageCount++;
 						topicList.addAll(info.getData());
 						if (null == adapter) {
 							adapter = new TopicListAdapter(
@@ -111,20 +117,20 @@ public class MyTopicListActivity extends BaseActivity {
 
 					@Override
 					public void onHttpException(HttpResponseException e) {
-						// TODO Auto-generated method stub
-
+						listView.onRefreshComplete();
+						LoadingDialog.dismiss();
 					}
 
 					@Override
 					public void onFinish() {
-						// TODO Auto-generated method stub
-
+						listView.onRefreshComplete();
+						LoadingDialog.dismiss();
 					}
 
 					@Override
 					public void onFailed(ResponseException e) {
-						// TODO Auto-generated method stub
-
+						listView.onRefreshComplete();
+						LoadingDialog.dismiss();
 					}
 				});
 
